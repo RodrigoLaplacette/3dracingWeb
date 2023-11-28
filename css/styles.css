@@ -5,12 +5,12 @@
 }
 
 @font-face {
-    font-family: letraf1;
+    font-family: 'letraf1';
     src: url(/fuentef1/letraf1.otf) 
 }
 
 body {
-    font-family:letraf1;
+    font-family: 'letraf1';
 }
 
 /**HEADER Y MENU DE NAVEGACION**/
