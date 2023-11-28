@@ -1,0 +1,775 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: letraf1;
+    src: url(/fuentef1/letraf1.otf) 
+}
+
+body {
+    font-family:letraf1;
+}
+
+/**HEADER Y MENU DE NAVEGACION**/
+header {
+    background-color:rgb(6, 74, 110);
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.menucontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.racing-logo {
+   display: flex;
+   width: 6rem;
+}
+.racing-logo img {
+    width:6rem;
+}
+
+.abrir-menu {
+    display: none;
+}
+
+.cerrar-menu {
+    display: none;
+}
+
+.menu {
+    margin-left: 25%;
+    padding: 3rem;
+    z-index: 1000;
+}
+.menu ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight:600;
+    padding: 2%;
+}
+
+.search-cart{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5%;
+}
+
+.buscar,
+.carrito {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/**propiedad para cambiar de color el texto a la hora de pasar el cursos**/
+.menu a:hover {
+    color:rgba(134, 141, 145, 0.912);
+}
+
+
+.maininicio {
+    background-color:rgb(255, 255, 255);
+}
+
+/**estilos seccion1**/
+.video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+    
+}
+.video video {
+   width: 80%;
+   pointer-events: none;
+   
+}
+
+.bienvenidostxt {
+    margin: auto;
+    height:100%;
+    width: 70%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.bienvenidostxt h1 {
+    font-size: 2rem;
+    padding-bottom: 2%;
+    text-align: center;
+    color: rgba(5, 68, 101, 0.912);
+}
+
+.bienvenidostxt p {
+    text-align: center;
+}
+
+/**estilos seccion2**/
+.contenedor-envios {
+    display: flex;
+    flex-wrap: wrap; 
+    background-color:rgba(134, 141, 145, 0.912);
+    padding-bottom: 5%;
+}
+
+.contenedor-envios h3 {
+    color: rgb(255, 255, 255);
+}
+
+.logoscompras {
+    padding-top: 3%;
+    text-align: center;
+    flex: auto;
+}
+
+
+.logoscompras img {
+    width: 5rem;
+}
+/**estilos seccion3**/
+
+
+.productos-destacados {
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.productos-destacados h3 {
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 2rem;
+    color:rgba(5, 68, 101, 0.912);
+}
+
+.conteinerdestacados {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 5%;
+    justify-content: center;
+}
+
+
+.p-destacado {
+    width: 20%;
+    padding: 2%;
+    
+}
+
+.p-destacado img {
+    width: 100%;
+}
+
+.p-destacado h4 {
+    width: 100%;
+    padding: 2%;
+}
+
+.p-destacado p {
+    padding: 2%;
+    font-size: 12px;
+    width: 100%;
+}
+
+.p-destacado .precio {
+    font-weight: bold;
+}
+
+.añadiralcarrito {
+    height: 50px;
+    width:80%;
+    margin-top: 2%;
+    background-color:rgba(5, 67, 101, 0.83);
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde */
+    padding: 2% 5%; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.añadiralcarrito:hover{
+    background-color: rgba(134, 141, 145, 0.912);
+}
+/**estilos para el footer**/
+footer {
+    background-color:rgba(5, 67, 101, 0.86);
+    height: 200px;
+    display: flex;
+}
+
+.containerfooter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.logofooter {
+    width: 120px;
+}
+
+
+.logofooter img {
+    width: 120px;
+}
+
+
+.redes{
+   display: flex;
+   gap: 10%;
+}
+
+.instagram,
+.whatsapp {
+    color: rgb(245, 222, 179);
+    font-size: 3rem;
+}
+
+
+.titulosfooter {
+    color: rgb(255, 255, 255);
+    margin-bottom: 2%;
+}
+
+.metodosdepago {
+    width: 20%;
+    height: 120px;
+}
+
+.metodosdepago img {
+    width: 60%;
+}
+.metodosdeenvio {
+    
+    height: 120px;
+}
+
+.metodosdeenvio img {
+    width: 100%;
+ 
+}
+/**estilos pagina de Productos**/
+
+.titulosecciones {
+    background-color:rgb(152, 151, 151);
+    padding:3%;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    margin-bottom: 6rem;
+    padding-top: 150px;
+}
+  
+
+.tienda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto-tienda {
+    padding: 20px;
+    text-align: center;
+}
+
+.tienda img {
+    width: 15rem;
+}
+
+.tienda h4 {
+    margin-top: 2rem;
+}
+
+.tienda p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-weight: 900;
+    color: rgb(75, 75, 77);
+}
+
+.tienda button {
+    margin-bottom: 6rem;
+}
+
+/**estilos pagina Nosotros**/
+
+.seccionnosotros {
+    height: 100%;
+    display: flex;
+    text-align:center;
+ 
+}
+
+.nosotrostexto {
+    width: 100%;
+    padding: 2rem;
+}
+
+.nosotrostexto h4 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 20px;
+    color:rgba(5, 68, 101, 0.912);
+}
+
+.imgnosotros {
+    width: 80%;
+    padding: 2rem;
+   
+}
+
+.imgnosotros img {
+    width: 100%;
+}
+
+/**estilos pagina Servicios**/
+
+.seccionservicios {
+height: 100%;
+padding: 2rem;
+display: flex;
+text-align:center;
+justify-content: center;
+}
+
+.serviciostexto {
+width: 100%;
+}
+
+.serviciostexto h4 {
+margin-bottom: 2rem;
+margin-top: 2rem;
+font-size: 20px;
+color:rgba(5, 68, 101, 0.912);;
+}
+
+.imgservicios {
+justify-content: center;
+width: 100%;
+height: 100%;
+}
+
+.imgservicios img {
+width: 95%;
+}
+
+/**estilos para pagina de Contacto**/
+
+
+.containercontacto {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center;
+    width: 50%;
+    margin: auto;
+   
+}
+.containercontacto form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+
+}
+
+.containercontacto h4{
+    font-size: 20px;
+    width:70%;
+    color: rgba(5, 68, 101, 0.912);
+} 
+
+.containercontacto form input {
+    margin: 1%;
+    width: 48%;
+    height: 2rem;
+   
+}
+.containercontacto form .enviarconsulta {
+    background-color:rgb(5, 67, 101);
+    color: #fff;
+    height: 2rem;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    width: 20rem;
+}
+
+.containercontacto form .enviarconsulta:hover {
+background-color:rgba(162, 162, 162, 0.912);
+}
+
+.containercontacto form textarea {
+    height: 15rem;
+    width: 100%;
+    padding: 5px;
+
+}
+
+
+@media only screen and (max-width:900px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+
+    .cerrar-menu{
+        color:rgb(255, 255, 255);
+        font-size: 3rem;
+    }
+
+
+
+    .menu {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: end;
+        background-color: rgb(5, 67, 101);
+        gap: 2rem;
+        top: 0;
+        right: 0px;
+        height: 350px;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+        padding:3rem
+    }
+    
+    .menu.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: end;
+    }
+
+
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+
+
+    .search-cart{
+        margin-left: 5%;
+         width: 100%;
+         gap: 3%;
+     }
+
+    .video video {
+       width: 90%;
+       
+    }
+
+    .bienvenidostxt {
+        width: 90%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .conteinerdestacados {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5%;
+        justify-content: center;
+    }
+    
+    
+    .p-destacado {
+        width: 40%;
+        padding: 2%;
+        
+    }
+    
+    .p-destacado img {
+        width: 100%;
+    }
+    
+    .p-destacado h4 {
+        width: 100%;
+        padding: 2%;
+    }
+    
+    .p-destacado p {
+        padding: 2%;
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    .p-destacado .precio {
+        font-weight: bold;
+    }
+    
+    .añadiralcarrito {
+        height: 30px;
+        width:100%;
+        margin-top: 2%;
+        background-color:rgb(5, 77, 116);
+        color: #fff; /* Color del texto */
+        border: none; /* Elimina el borde */
+        padding: 2% 5%; /* Espacio interno */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    footer {
+        height: 250px;
+    }
+    
+    
+    .logofooter {
+        width: 20%;
+        margin-left: 5%;
+    }
+    
+    
+    .logofooter img {
+        width: 120px;
+    }
+    
+    
+    .redes{
+       display:block;
+    }
+    
+    
+    .titulosfooter {
+        width: 100%;
+        margin-bottom: 5%;
+        font-size: 12px;
+    }
+    
+    .metodosdepago {
+        display: block;
+        margin-left: 10%;
+     
+    }
+    
+    .metodosdepago img {
+        display: block;
+
+    }
+    .metodosdeenvio {
+        width: 40%;
+        margin-left: 4%;
+    }
+    
+    .metodosdeenvio img {
+        width: 120px;
+    }
+    
+    .seccionnosotros {
+        height: 100%;
+        display: block;
+        text-align:center;
+        align-items: center;
+    }
+    
+    .nosotrostexto {
+        width: 100%;
+    }
+    
+    .nosotrostexto h4 {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 20px;
+        color:rgba(5, 68, 101, 0.912);
+    }
+    
+    .imgnosotros {
+       margin: auto;
+    }
+
+    .seccionservicios {
+        display:block;
+        text-align:center;
+        align-items: center;
+        }
+
+    .containercontacto {
+            height: 100%;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        .containercontacto form {
+            display: block;
+            margin-bottom: 1rem;
+        
+        }
+        
+        
+        .containercontacto h4{
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 2rem;
+        }
+        
+        .containercontacto form input {
+            margin: 5px;
+            width: 80%;
+            height: 3rem;
+            padding: 20px;
+        }
+        .containercontacto form .enviarconsulta {
+            height: 3rem;
+            width: 80%;
+        }
+        
+        .containercontacto form textarea {
+            width: 80%;
+        
+        }
+        
+        
+}
+
+
+@media only screen and (max-width:600px){
+
+    
+    .bienvenidostxt h1 {
+        font-size: 1.4rem;
+    }
+    
+    .bienvenidostxt p {
+        font-size: 0.8rem;
+    }
+
+    .productos-destacados h3 {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        font-size: 1.5rem;
+    }
+
+
+
+    footer {
+        height: 450px;
+        display: block;
+    }
+
+    .containerfooter {
+        display: block;
+        align-items: start;
+    }
+
+    .logofooter {
+        margin-left: 1%;
+    }
+    
+    
+    .logofooter img {
+        margin-top: 30px;
+    }
+    
+    
+    .redes{
+       display:flex;
+       margin-top: 20px;
+       margin-left: 2%;
+       height: 60px;
+       width: 20%;
+  
+    }
+    
+    .titulosfooter {
+        width: 120px;
+        margin-bottom: 5%;
+        font-size: 12px;
+    }
+    
+    .metodosdepago {
+        margin-top: 20px;
+        margin-left: 2%;
+        height: 100px;
+    
+    }
+    
+    .metodosdepago img {
+        display: block;
+        width: 100px;
+    }
+    .metodosdeenvio {
+        width: 30%;
+        margin-top: 30px;
+        margin-left: 2%;
+        height: 70px;
+    }
+    
+    .producto-tienda {
+        padding: 5px;
+        text-align: center;
+    }
+    
+    .tienda img {
+        width: 7rem;
+    }
+    
+    .tienda h4 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    
+    .tienda p {
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+        width: 90%;
+    }
+    
+    .tienda button {
+        margin:0;
+        width: 85%;
+        margin-bottom: 15px;
+    }
+    
+}
+
+    
