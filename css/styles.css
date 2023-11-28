@@ -5,12 +5,12 @@
 }
 
 @font-face {
-    font-family: 'letraf1';
-    src: url(/fuentef1/letraf1.otf) 
-}
+    font-family: Formula1-Regular;
+    src: url(../fuentes/Formula1-Regular.ttf);
+    }
 
 body {
-    font-family: 'letraf1';
+    font-family:Formula1-Regular;
 }
 
 /**HEADER Y MENU DE NAVEGACION**/
