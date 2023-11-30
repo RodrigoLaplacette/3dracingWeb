@@ -168,8 +168,9 @@ header {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
     justify-content: center;
+
 }
 
 
@@ -185,13 +186,15 @@ header {
 
 .p-destacado h4 {
     width: 100%;
-    padding: 2%;
+    height: 45px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .p-destacado p {
-    padding: 2%;
-    font-size: 12px;
-    width: 100%;
+   font-size: 12px;
+   height: 50px;
+   padding: 5%;
 }
 
 .p-destacado .precio {
@@ -201,11 +204,10 @@ header {
 .añadiralcarrito {
     height: 50px;
     width:80%;
-    margin-top: 2%;
     background-color:rgba(5, 67, 101, 0.83);
     color: #fff; /* Color del texto */
     border: none; /* Elimina el borde */
-    padding: 2% 5%; /* Espacio interno */
+    padding: 5% 5%; /* Espacio interno */
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-weight: bold; /* Texto en negrita */
@@ -263,7 +265,7 @@ footer {
 }
 
 .metodosdepago img {
-    width: 60%;
+    width: 50%;
 }
 .metodosdeenvio {
     
@@ -294,22 +296,27 @@ footer {
 }
 
 .producto-tienda {
-    padding: 20px;
-    text-align: center;
+    height: 100%;
+    width: 280px;
+    padding: 10px;
 }
 
 .tienda img {
-    width: 15rem;
+    width: 100%;
 }
 
 .tienda h4 {
-    margin-top: 2rem;
+    font-size: 14px;
+    width: 70%;
+    height: 45px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .tienda p {
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 12px;
+    height: 50px;
+    width: 100%;
 }
 
 .precio {
@@ -545,16 +552,10 @@ background-color:rgba(162, 162, 162, 0.912);
     }
     
     .añadiralcarrito {
-        height: 30px;
-        width:100%;
-        margin-top: 2%;
-        background-color:rgb(5, 77, 116);
-        color: #fff; /* Color del texto */
-        border: none; /* Elimina el borde */
-        padding: 2% 5%; /* Espacio interno */
-        border-radius: 5px; /* Bordes redondeados */
-        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-        font-weight: bold; /* Texto en negrita */
+        height: 50px;
+        width:70%;
+        margin-top: 0;
+        padding: 5px;
     }
 
     footer {
@@ -602,6 +603,48 @@ background-color:rgba(162, 162, 162, 0.912);
     .metodosdeenvio img {
         width: 120px;
     }
+
+    .tienda {
+        justify-content: none;
+        margin-bottom: 20px;
+    }
+
+    .producto-tienda {
+        width: 30%;
+    }
+
+    .producto-tienda img {
+        width: 100%;
+    }
+    
+    .tienda h4 {
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    .tienda p {
+        font-size: 12px;
+        height: 70px;
+        width: 70%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .producto-tienda .precio {
+        margin-top: 5px;
+        height: 25px;
+        width: 100%;
+    }
+    
+
+    .tienda button {
+        margin-bottom:0;
+    }
+
+
     
     .seccionnosotros {
         height: 100%;
@@ -741,35 +784,38 @@ background-color:rgba(162, 162, 162, 0.912);
         margin-left: 2%;
         height: 70px;
     }
+
+
     
     .producto-tienda {
-        padding: 5px;
-        text-align: center;
+
+        width: 50%;
+        padding: 2%;
     }
     
     .tienda img {
-        width: 7rem;
+        width:100%;
     }
     
     .tienda h4 {
-        margin-top: 5px;
-        font-size: 15px;
+        font-size: 14px;
+        width: 100%;
+        height: 50px;
     }
     
     .tienda p {
-        font-size: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 0;
-        width: 90%;
+        font-size: 12px;
+        height: 60px;
+        width: 95%;
     }
+
+  
     
-    .tienda button {
-        margin:0;
-        width: 85%;
-        margin-bottom: 15px;
-    }
+
     
+ 
+    
+   
 }
 
     
