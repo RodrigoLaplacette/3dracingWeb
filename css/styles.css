@@ -22,16 +22,17 @@ body {
 header {
     background-color:rgb(6, 74, 110);
     position: fixed;
-    width: 100%;
     height: 120px;
-    display: flex;
-    padding: 2rem;
     align-items: center;
+    width: 100%;
+    display: flex;
+   
 }
 
 .menucontainer {
+    height: auto;
+    position: fixed;
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +58,7 @@ header {
 .menu {
     margin-left: 25%;
     padding: 3rem;
-    z-index: 1000;
+   
 }
 .menu ul {
     display: flex;
@@ -78,7 +79,7 @@ header {
 .search-cart{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: auto;
     gap: 5%;
 }
 
@@ -105,8 +106,8 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 130px;
-    
 }
+
 .video video {
    width: 80%;
    pointer-events: none;
@@ -159,8 +160,9 @@ header {
 
 
 .productos-destacados {
-    padding-bottom: 2%;
-    padding-top: 2%;
+    width: 100%;
+    height: auto;
+
 }
 
 .productos-destacados h3 {
@@ -168,54 +170,52 @@ header {
     text-align: center;
     font-size: 2rem;
     color:rgba(5, 68, 101, 0.912);
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .conteinerdestacados {
     display: flex;
-    align-items: center;
-    text-align: center;
     width: 100%;
-    padding-bottom: 10px;
+    height: auto;
+    margin-bottom: 50px;
     justify-content: center;
-
 }
 
 
 .p-destacado {
     width: 20%;
-    padding: 2%;
-    
+    padding: 10px;
 }
 
 .p-destacado img {
     width: 100%;
+  
 }
 
 .p-destacado h4 {
-    width: 100%;
+    width: auto;
     height: 45px;
-    margin-bottom: 5px;
-    margin-top: 5px;
 }
 
 .p-destacado p {
    font-size: 12px;
-   height: 50px;
-   padding: 5%;
+   width: auto;
+   height: 40px;
 }
 
 .p-destacado .precio {
     font-weight: bold;
 }
 
+
 .añadiralcarrito {
     font-family: Formula1-Bold;
     height: 50px;
-    width:80%;
+    width:150px;
     background-color:rgba(5, 67, 101, 0.83);
     color: #fff; /* Color del texto */
     border: none; /* Elimina el borde */
-    padding: 5% 5%; /* Espacio interno */
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-weight: bold; /* Texto en negrita */
@@ -223,6 +223,14 @@ header {
 
 .añadiralcarrito:hover{
     background-color: rgba(134, 141, 145, 0.912);
+}
+
+.iratienda {
+  display:flex;
+  width: 95%;
+  height: 55px;
+  margin-bottom: 20px;
+  justify-content: end;
 }
 /**estilos para el footer**/
 footer {
@@ -411,22 +419,23 @@ width: 95%;
     flex-wrap: wrap;
     justify-content: center; 
     text-align: center;
-    width: 50%;
+    width: 80%;
     margin: auto;
+    padding: 20px;
    
 }
 .containercontacto form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem;
+ 
 
 }
 
 .containercontacto h4{
     font-family: Formula1-Bold;
     font-size: 20px;
-    width:70%;
+    width:500px;
     color: rgba(5, 68, 101, 0.912);
 } 
 
@@ -468,7 +477,7 @@ background-color:rgba(162, 162, 162, 0.912);
         font-size: 2rem;
         background-color: transparent;
         cursor: pointer;
-
+        margin-right: 10%;
     }
 
     .cerrar-menu{
@@ -480,18 +489,19 @@ background-color:rgba(162, 162, 162, 0.912);
 
     .menu {
         opacity: 0;
+        width: 200px;
         visibility: hidden;
         display: flex;
         flex-direction: column;
         position: absolute;
-        align-items: end;
+        align-items: center;
         background-color: rgb(5, 67, 101);
         gap: 2rem;
-        top: 0;
-        right: 0px;
+        top:10px;
+        right: 0;
         height: 350px;
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
-        padding:3rem
+        padding:2rem;
     }
     
     .menu.visible {
@@ -531,15 +541,12 @@ background-color:rgba(162, 162, 162, 0.912);
     .conteinerdestacados {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+       
     }
     
     
     .p-destacado {
-        width: 40%;
+        width: 45%;
         padding: 10px;
         
     }
@@ -565,10 +572,16 @@ background-color:rgba(162, 162, 162, 0.912);
     
     .añadiralcarrito {
         height: 50px;
-        width:70%;
+        width:auto;
         margin-top: 0;
         padding: 5px;
     }
+
+    .iratienda {
+        width: 95%;
+        text-align: end;
+      
+      }
 
     footer {
         height: 200px;
@@ -576,7 +589,7 @@ background-color:rgba(162, 162, 162, 0.912);
     
 
     .tienda {
-        justify-content: none;
+        width: 100%;
         margin-bottom: 20px;
     }
 
@@ -660,8 +673,9 @@ background-color:rgba(162, 162, 162, 0.912);
         
         .containercontacto h4{
             width: 100%;
+            height: auto;
             font-size: 1.2rem;
-            padding: 2rem;
+            padding: 1rem;
         }
         
         .containercontacto form input {
@@ -701,6 +715,15 @@ background-color:rgba(162, 162, 162, 0.912);
 
     .conteinerdestacados p {
         height: auto;
+    }
+
+    .productos-destacados h3 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .añadiralcarrito {
+        font-size: 0.7rem;
     }
 
 
@@ -770,6 +793,13 @@ background-color:rgba(162, 162, 162, 0.912);
         font-size: 12px;
         height: auto;
         width: auto;
+    }
+
+    .containercontacto h4{
+        width: 100%;
+        height: auto;
+        font-size: 0.8rem;
+        padding: 1rem;
     }
 
   
