@@ -1,0 +1,131 @@
+@import "../base/variables";
+
+.maininicio {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /**estilos seccion1**/
+  .video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+  
+    video {
+      width: 80%;
+      pointer-events: none;
+    }
+  }
+  
+  .bienvenidostxt {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+  
+    h1 {
+      font-family: Formula1-Bold;
+      font-size: 2rem;
+      padding-bottom: 2%;
+      text-align: center;
+      color: $color-principal;
+    }
+  
+    p {
+      text-align: center;
+    }
+  }
+  
+  /**estilos seccion2**/
+  .contenedor-envios {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(134, 141, 145, 0.912);
+    padding-bottom: 5%;
+  
+    h3 {
+      color: rgb(255, 255, 255);
+    }
+  }
+  
+  .logoscompras {
+    padding-top: 3%;
+    text-align: center;
+    flex: auto;
+  
+    img {
+      width: 5rem;
+    }
+  }
+  
+  /**estilos seccion3**/
+  
+  .productos-destacados {
+    width: 100%;
+    height: auto;
+  
+    h3 {
+      font-family: Formula1-Bold;
+      text-align: center;
+      font-size: 2rem;
+      color: $color-principal;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  .conteinerdestacados {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  
+  .p-destacado {
+    width: 20%;
+    padding: 10px;
+  
+    img {
+      width: 100%;
+    }
+  
+    h4 {
+      width: auto;
+      height: 45px;
+    }
+  
+    p {
+      font-size: 12px;
+      width: auto;
+      height: 40px;
+    }
+  
+    .precio {
+      font-weight: bold;
+    }
+  }
+  
+  .aniadiralcarrito {
+    &:hover {
+      background-color: rgba(134, 141, 145, 0.912);
+    }
+    font-family: Formula1-Bold;
+    height: 50px;
+    width: 150px;
+    background-color: $color-principal;
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .iratienda {
+    display: flex;
+    width: 95%;
+    height: 55px;
+    margin-bottom: 20px;
+    justify-content: end;
+  }

@@ -1,0 +1,74 @@
+@import "../base/variables";
+
+/**HEADER Y MENU DE NAVEGACION**/
+header {
+    background-color:$color-principal;
+    position: fixed;
+    height: 120px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+  }
+  
+  .menucontainer {
+    height: auto;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .racing-logo {
+    display: flex;
+    width: 6rem;
+    img {
+      width: 6rem;
+    }
+  }
+  
+  .menu {
+    margin-left: 25%;
+    padding: 3rem;
+  
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style-type: none;
+    }
+    a {
+      font-family: Formula1-Bold;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2%;
+      &:hover {
+        color: rgba(134, 141, 145, 0.912);
+      }
+    }
+  }
+  
+  .search-cart {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 5%;
+  }
+  
+  .buscar,
+  .carrito {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /**propiedad para cambiar de color el texto a la hora de pasar el cursos**/
+  
+  .abrir-menu {
+    display: none;
+  }
+  
+  .cerrar-menu {
+    display: none;
+  }

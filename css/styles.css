@@ -1,814 +1,671 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: Formula1-Regular;
-    src: url(../fuentes/Formula1-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: Formula1-Bold;
-        src: url(../fuentes/Formula1-Bold.ttf);
-        }
-
-body {
-    font-family:Formula1-Regular;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /**HEADER Y MENU DE NAVEGACION**/
 header {
-    background-color:rgb(6, 74, 110);
-    position: fixed;
-    height: 120px;
-    align-items: center;
-    width: 100%;
-    display: flex;
-   
+  background-color: rgb(6, 74, 110);
+  position: fixed;
+  height: 120px;
+  align-items: center;
+  width: 100%;
+  display: flex;
 }
 
 .menucontainer {
-    height: auto;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: auto;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .racing-logo {
-   display: flex;
-   width: 6rem;
+  display: flex;
+  width: 6rem;
 }
 .racing-logo img {
-    width:6rem;
-}
-
-.abrir-menu {
-    display: none;
-}
-
-.cerrar-menu {
-    display: none;
+  width: 6rem;
 }
 
 .menu {
-    margin-left: 25%;
-    padding: 3rem;
-   
+  margin-left: 25%;
+  padding: 3rem;
 }
 .menu ul {
-    display: flex;
-    gap: 1rem;
-    list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+.menu a {
+  font-family: Formula1-Bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2%;
+}
+.menu a:hover {
+  color: rgba(134, 141, 145, 0.912);
 }
 
-
-.menu ul li a {
-    font-family: Formula1-Bold;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight:600;
-    padding: 2%;
-}
-
-.search-cart{
-    display: flex;
-    align-items: center;
-    width: auto;
-    gap: 5%;
+.search-cart {
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 5%;
 }
 
 .buscar,
 .carrito {
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /**propiedad para cambiar de color el texto a la hora de pasar el cursos**/
-.menu a:hover {
-    color:rgba(134, 141, 145, 0.912);
+.abrir-menu {
+  display: none;
 }
 
+.cerrar-menu {
+  display: none;
+}
 
 .maininicio {
-    background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 /**estilos seccion1**/
 .video {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
 }
-
 .video video {
-   width: 80%;
-   pointer-events: none;
-   
+  width: 80%;
+  pointer-events: none;
 }
 
 .bienvenidostxt {
-    margin: auto;
-    height:100%;
-    width: 70%;
-    padding-bottom: 2%;
-    padding-top: 2%;
+  margin: auto;
+  height: 100%;
+  width: 70%;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
-
 .bienvenidostxt h1 {
-    font-family: Formula1-Bold;
-    font-size: 2rem;
-    padding-bottom: 2%;
-    text-align: center;
-    color: rgba(5, 68, 101, 0.912);
+  font-family: Formula1-Bold;
+  font-size: 2rem;
+  padding-bottom: 2%;
+  text-align: center;
+  color: rgb(6, 74, 110);
 }
-
 .bienvenidostxt p {
-    text-align: center;
+  text-align: center;
 }
 
 /**estilos seccion2**/
 .contenedor-envios {
-    display: flex;
-    flex-wrap: wrap; 
-    background-color:rgba(134, 141, 145, 0.912);
-    padding-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(134, 141, 145, 0.912);
+  padding-bottom: 5%;
 }
-
 .contenedor-envios h3 {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .logoscompras {
-    padding-top: 3%;
-    text-align: center;
-    flex: auto;
+  padding-top: 3%;
+  text-align: center;
+  flex: auto;
 }
-
-
 .logoscompras img {
-    width: 5rem;
+  width: 5rem;
 }
+
 /**estilos seccion3**/
-
-
 .productos-destacados {
-    width: 100%;
-    height: auto;
-
+  width: 100%;
+  height: auto;
 }
-
 .productos-destacados h3 {
-    font-family: Formula1-Bold;
-    text-align: center;
-    font-size: 2rem;
-    color:rgba(5, 68, 101, 0.912);
-    margin-top: 15px;
-    margin-bottom: 15px;
+  font-family: Formula1-Bold;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(6, 74, 110);
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .conteinerdestacados {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  justify-content: center;
 }
-
 
 .p-destacado {
-    width: 20%;
-    padding: 10px;
+  width: 20%;
+  padding: 10px;
 }
-
 .p-destacado img {
-    width: 100%;
-  
+  width: 100%;
 }
-
 .p-destacado h4 {
-    width: auto;
-    height: 45px;
+  width: auto;
+  height: 45px;
 }
-
 .p-destacado p {
-   font-size: 12px;
-   width: auto;
-   height: 40px;
+  font-size: 12px;
+  width: auto;
+  height: 40px;
 }
-
 .p-destacado .precio {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-
-.añadiralcarrito {
-    font-family: Formula1-Bold;
-    height: 50px;
-    width:150px;
-    background-color:rgba(5, 67, 101, 0.83);
-    color: #fff; /* Color del texto */
-    border: none; /* Elimina el borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-weight: bold; /* Texto en negrita */
+.aniadiralcarrito {
+  font-family: Formula1-Bold;
+  height: 50px;
+  width: 150px;
+  background-color: rgb(6, 74, 110);
+  color: #fff; /* Color del texto */
+  border: none; /* Elimina el borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-weight: bold; /* Texto en negrita */
 }
-
-.añadiralcarrito:hover{
-    background-color: rgba(134, 141, 145, 0.912);
+.aniadiralcarrito:hover {
+  background-color: rgba(134, 141, 145, 0.912);
 }
 
 .iratienda {
-  display:flex;
+  display: flex;
   width: 95%;
   height: 55px;
   margin-bottom: 20px;
   justify-content: end;
 }
+
 /**estilos para el footer**/
 footer {
-    background-color:rgba(5, 67, 101, 0.86);
-    height: 200px;
-    justify-content: center;
-    align-items: center;
+  background-color: rgb(6, 74, 110);
+  height: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerfooter {
-    display: flex;
-    align-items: center;
-   justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-
-.redes{
-   display: flex;
-   gap: 10%;
+.redes {
+  display: flex;
+  gap: 10%;
 }
 
 .instagram,
 .whatsapp {
-    color: rgb(160, 160, 160);
-    font-size: 3rem;
+  color: rgb(160, 160, 160);
+  font-size: 3rem;
 }
 
-
 .titulosfooter {
-    color: rgb(255, 255, 255);
-    padding: 15px;
-   
+  color: rgb(255, 255, 255);
+  padding: 15px;
 }
 
 .metodosdepago {
-    display: inline-block;
-    width: 270px;
-    height: 120px;
+  display: inline-block;
+  width: 270px;
+  height: 120px;
 }
-
 .metodosdepago img {
-    max-width: 100%;
-}
-.metodosdeenvio {
-    height: 120px;
+  max-width: 100%;
 }
 
+.metodosdeenvio {
+  height: 120px;
+}
 .metodosdeenvio img {
-    width: 100%;
- 
+  width: 100%;
 }
 
 .derechos {
-    color: #ffffff;
-    padding: 10px;
-    margin-top: 30px;
-    text-align: center;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: Formula1-Regular;
+  src: url(../fuentes/Formula1-Regular.ttf);
+}
+@font-face {
+  font-family: Formula1-Bold;
+  src: url(../fuentes/Formula1-Bold.ttf);
+}
+body {
+  font-family: Formula1-Regular;
 }
 
 /**estilos pagina de Productos**/
-
 .titulosecciones {
-    font-family: Formula1-Bold;
-    background-color:rgb(152, 151, 151);
-    padding:3%;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    margin-bottom: 6rem;
-    padding-top: 150px;
-}
-  
-
-.tienda {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 95%;
-    margin: auto;
+  font-family: Formula1-Bold;
+  background-color: rgb(152, 151, 151);
+  padding: 3%;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  margin-bottom: 6rem;
+  padding-top: 150px;
 }
 
 .producto-tienda {
-    height: 100%;
-    width: 280px;
-    padding: 10px;
+  height: 100%;
+  width: 280px;
+  padding: 10px;
 }
 
+.tienda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 95%;
+  margin: auto;
+}
 .tienda img {
-    width: 100%;
+  width: 100%;
 }
-
 .tienda h4 {
-    font-size: 14px;
-    width: 70%;
-    height: 45px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+  font-size: 14px;
+  width: 70%;
+  height: 45px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
-
 .tienda p {
-    font-size: 12px;
-    height: 50px;
-    width: 100%;
+  font-size: 12px;
+  height: 50px;
+  width: 100%;
 }
 
 .precio {
-    font-weight: 900;
-    color: rgb(75, 75, 77);
-    font-family: Formula1-Bold;
+  font-weight: 900;
+  color: rgb(75, 75, 77);
+  font-family: Formula1-Bold;
 }
 
 .tienda button {
-    margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 
 /**estilos pagina Nosotros**/
-
 .seccionnosotros {
-    height: 100%;
-    display: flex;
-    text-align:center;
- 
+  height: 100%;
+  display: flex;
+  text-align: center;
 }
 
 .nosotrostexto {
-    width: 100%;
-    padding: 2rem;
+  width: 100%;
+  padding: 2rem;
 }
-
 .nosotrostexto h4 {
-    font-family: Formula1-Bold;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    font-size: 20px;
-    color:rgba(5, 68, 101, 0.912);
+  font-family: Formula1-Bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+  color: rgba(5, 68, 101, 0.912);
 }
 
 .imgnosotros {
-    width: 80%;
-    padding: 2rem;
-   
+  width: 80%;
+  padding: 2rem;
 }
-
 .imgnosotros img {
-    width: 100%;
+  width: 100%;
 }
 
 /**estilos pagina Servicios**/
-
 .seccionservicios {
-height: 100%;
-padding: 2rem;
-display: flex;
-text-align:center;
-justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .serviciostexto {
-width: 100%;
+  width: 100%;
 }
-
 .serviciostexto h4 {
-font-family: Formula1-Bold;
-margin-bottom: 2rem;
-margin-top: 2rem;
-font-size: 20px;
-color:rgba(5, 68, 101, 0.912);;
+  font-family: Formula1-Bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+  color: rgba(5, 68, 101, 0.912);
 }
 
 .imgservicios {
-justify-content: center;
-width: 100%;
-height: 100%;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-
 .imgservicios img {
-width: 95%;
+  width: 95%;
 }
 
 /**estilos para pagina de Contacto**/
-
-
 .containercontacto {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    text-align: center;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.containercontacto h4 {
+  font-family: Formula1-Bold;
+  font-size: 20px;
+  width: 500px;
+  color: rgba(5, 68, 101, 0.912);
 }
 .containercontacto form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
- 
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.containercontacto h4{
-    font-family: Formula1-Bold;
-    font-size: 20px;
-    width:500px;
-    color: rgba(5, 68, 101, 0.912);
-} 
-
 .containercontacto form input {
-    margin: 1%;
-    width: 48%;
-    height: 2rem;
-   
+  margin: 1%;
+  width: 48%;
+  height: 2rem;
+}
+.containercontacto form textarea {
+  height: 15rem;
+  width: 100%;
+  padding: 5px;
 }
 .containercontacto form .enviarconsulta {
-    background-color:rgb(5, 67, 101);
-    color: #fff;
-    height: 2rem;
-    font-size: 15px;
-    border: none;
-    border-radius: 4px;
-    margin: 5px;
-    width: 20rem;
+  background-color: rgb(5, 67, 101);
+  color: #fff;
+  height: 2rem;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  width: 20rem;
 }
-
 .containercontacto form .enviarconsulta:hover {
-background-color:rgba(162, 162, 162, 0.912);
+  background-color: rgba(162, 162, 162, 0.912);
 }
 
-.containercontacto form textarea {
-    height: 15rem;
+@media only screen and (max-width: 900px) {
+  .menu {
+    opacity: 0;
+    width: 200px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    background-color: rgb(5, 67, 101);
+    gap: 2rem;
+    top: 10px;
+    right: 0;
+    height: 350px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: end;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10%;
+  }
+  .cerrar-menu {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+  }
+  .search-cart {
+    margin-left: 5%;
+    width: 100%;
+    gap: 3%;
+  }
+  .video video {
+    width: 90%;
+  }
+  .bienvenidostxt {
+    width: 90%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .conteinerdestacados {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .p-destacado {
+    width: 45%;
+    padding: 10px;
+  }
+  .p-destacado img {
+    width: 100%;
+  }
+  .p-destacado h4 {
     width: 100%;
     padding: 5px;
-
+  }
+  .p-destacado p {
+    padding: 5px;
+    font-size: 12px;
+    width: 100%;
+  }
+  .p-destacado .precio {
+    font-weight: bold;
+  }
+  .aniadiralcarrito {
+    height: 50px;
+    width: auto;
+    margin-top: 0;
+    padding: 5px;
+  }
+  .iratienda {
+    width: 95%;
+    text-align: end;
+  }
+  footer {
+    height: 200px;
+  }
+  .producto-tienda {
+    width: 30%;
+  }
+  .producto-tienda img {
+    width: 100%;
+  }
+  .tienda {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .tienda h4 {
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .tienda p {
+    font-size: 12px;
+    height: 70px;
+    width: 70%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .tienda button {
+    margin-bottom: 0;
+  }
+  .producto-tienda .precio {
+    margin-top: 5px;
+    height: 25px;
+    width: 100%;
+  }
+  .seccionnosotros {
+    height: 100%;
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+  .nosotrostexto {
+    width: 100%;
+  }
+  .nosotrostexto h4 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 20px;
+    color: rgba(5, 68, 101, 0.912);
+  }
+  .imgnosotros {
+    margin: auto;
+  }
+  .seccionservicios {
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+  .containercontacto {
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .containercontacto h4 {
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .containercontacto form {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .containercontacto form input {
+    margin: 5px;
+    width: 80%;
+    height: 3rem;
+    padding: 20px;
+  }
+  .containercontacto form textarea {
+    width: 80%;
+  }
+  .containercontacto form .enviarconsulta {
+    height: 3rem;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bienvenidostxt h1 {
+    font-size: 1.4rem;
+  }
+  .bienvenidostxt h1 p {
+    font-size: 0.8rem;
+  }
+  .bienvenidostxt h1 h4 {
+    height: auto;
+  }
+  .conteinerdestacados p {
+    height: auto;
+  }
+  .productos-destacados h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  .aniadiralcarrito {
+    font-size: 0.7rem;
+  }
+  footer {
+    height: 420px;
+  }
+  .containerfooter {
+    display: block;
+  }
+  .redes {
+    display: flex;
+    padding: 10px;
+    height: auto;
+    width: 50%;
+  }
+  .titulosfooter {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .metodosdepago {
+    padding: 10px;
+    width: 90%;
+    height: auto;
+  }
+  .metodosdepago img {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .metodosdeenvio {
+    max-width: 40%;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .metodosdeenvio img {
+    max-width: 100%;
+  }
+  .derechos {
+    margin-top: 5%;
+  }
+  .producto-tienda {
+    width: 50%;
+    padding: 2%;
+  }
+  .tienda img {
+    width: 100%;
+  }
+  .tienda h4 {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+  }
+  .tienda p {
+    font-size: 12px;
+    height: auto;
+    width: auto;
+  }
+  .containercontacto h4 {
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
 }
 
-
-@media only screen and (max-width:900px) {
-
-    .abrir-menu,
-    .cerrar-menu {
-        display: block;
-        border: 0;
-        font-size: 2rem;
-        background-color: transparent;
-        cursor: pointer;
-        margin-right: 10%;
-    }
-
-    .cerrar-menu{
-        color:rgb(255, 255, 255);
-        font-size: 3rem;
-    }
-
-
-
-    .menu {
-        opacity: 0;
-        width: 200px;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: center;
-        background-color: rgb(5, 67, 101);
-        gap: 2rem;
-        top:10px;
-        right: 0;
-        height: 350px;
-        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
-        padding:2rem;
-    }
-    
-    .menu.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        align-items: end;
-    }
-
-
-    .menu ul li a {
-        font-size: 1rem;
-    }
-
-
-
-    .search-cart{
-        margin-left: 5%;
-         width: 100%;
-         gap: 3%;
-     }
-
-    .video video {
-       width: 90%;
-       
-    }
-
-    .bienvenidostxt {
-        width: 90%;
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-
-    .conteinerdestacados {
-        display: flex;
-        flex-wrap: wrap;
-       
-    }
-    
-    
-    .p-destacado {
-        width: 45%;
-        padding: 10px;
-        
-    }
-    
-    .p-destacado img {
-        width: 100%;
-    }
-    
-    .p-destacado h4 {
-        width: 100%;
-        padding: 5px;
-    }
-    
-    .p-destacado p {
-        padding: 5px;
-        font-size: 12px;
-        width: 100%;
-    }
-    
-    .p-destacado .precio {
-        font-weight: bold;
-    }
-    
-    .añadiralcarrito {
-        height: 50px;
-        width:auto;
-        margin-top: 0;
-        padding: 5px;
-    }
-
-    .iratienda {
-        width: 95%;
-        text-align: end;
-      
-      }
-
-    footer {
-        height: 200px;
-    }
-    
-
-    .tienda {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .producto-tienda {
-        width: 30%;
-    }
-
-    .producto-tienda img {
-        width: 100%;
-    }
-    
-    .tienda h4 {
-        font-size: 14px;
-        width: 100%;
-        height: 40px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-    
-    .tienda p {
-        font-size: 12px;
-        height: 70px;
-        width: 70%;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    .producto-tienda .precio {
-        margin-top: 5px;
-        height: 25px;
-        width: 100%;
-    }
-    
-
-    .tienda button {
-        margin-bottom:0;
-    }
-
-
-    
-    .seccionnosotros {
-        height: 100%;
-        display: block;
-        text-align:center;
-        align-items: center;
-    }
-    
-    .nosotrostexto {
-        width: 100%;
-    }
-    
-    .nosotrostexto h4 {
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-        font-size: 20px;
-        color:rgba(5, 68, 101, 0.912);
-    }
-    
-    .imgnosotros {
-       margin: auto;
-    }
-
-    .seccionservicios {
-        display:block;
-        text-align:center;
-        align-items: center;
-        }
-
-    .containercontacto {
-            height: 100%;
-            width: 100%;
-            display: block;
-            text-align: center;
-        }
-        .containercontacto form {
-            display: block;
-            margin-bottom: 1rem;
-        
-        }
-        
-        
-        .containercontacto h4{
-            width: 100%;
-            height: auto;
-            font-size: 1.2rem;
-            padding: 1rem;
-        }
-        
-        .containercontacto form input {
-            margin: 5px;
-            width: 80%;
-            height: 3rem;
-            padding: 20px;
-        }
-        .containercontacto form .enviarconsulta {
-            height: 3rem;
-            width: 80%;
-        }
-        
-        .containercontacto form textarea {
-            width: 80%;
-        
-        }
-        
-        
-}
-
-
-@media only screen and (max-width:600px){
-
-    
-    .bienvenidostxt h1 {
-        font-size: 1.4rem;
-    }
-    
-    .bienvenidostxt p {
-        font-size: 0.8rem;
-    }
-
-    .conteinerdestacados h4 {
-         height: auto;
-    }
-
-    .conteinerdestacados p {
-        height: auto;
-    }
-
-    .productos-destacados h3 {
-        font-size: 1.2rem;
-        margin-top: 20px;
-    }
-
-    .añadiralcarrito {
-        font-size: 0.7rem;
-    }
-
-
-    footer {
-        height: 420px; 
-    }
-
-    .containerfooter {
-        display:block;
-        
-    }
-    
-    .redes{
-       display:flex;
-       padding: 10px;
-       height:auto;
-       width: 50%;
-  
-    }
-    
-    .titulosfooter {
-        padding: 10px;
-        font-size: 15px;
-    }
-    
-    .metodosdepago {
-        padding: 10px;
-        width:90%;
-        height: auto; 
-    }
-    
-    .metodosdepago img {
-        display: inline-block;
-        max-width: 100%;
-    }
-    .metodosdeenvio {
-       max-width:40%;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    .metodosdeenvio img {
-        max-width: 100%;
-    }
-
-    .derechos {
-        margin-top: 5%;
-    }
-
-    .producto-tienda {
-
-        width: 50%;
-        padding: 2%;
-    }
-    
-    .tienda img {
-        width:100%;
-    }
-    
-    .tienda h4 {
-        font-size: 14px;
-        width: auto;
-        height: auto;
-    }
-    
-    .tienda p {
-        font-size: 12px;
-        height: auto;
-        width: auto;
-    }
-
-    .containercontacto h4{
-        width: 100%;
-        height: auto;
-        font-size: 0.8rem;
-        padding: 1rem;
-    }
-
-  
-    
-
-    
- 
-    
-   
-}
-
-    
+/*# sourceMappingURL=styles.css.map */

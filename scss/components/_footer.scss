@@ -1,0 +1,54 @@
+@import "../base/variables";
+
+/**estilos para el footer**/
+footer {
+    background-color: $color-principal;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerfooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .redes {
+    display: flex;
+    gap: 10%;
+  }
+  
+  .instagram,
+  .whatsapp {
+    color: rgb(160, 160, 160);
+    font-size: 3rem;
+  }
+  
+  .titulosfooter {
+    color: rgb(255, 255, 255);
+    padding: 15px;
+  }
+  
+  .metodosdepago {
+    display: inline-block;
+    width: 270px;
+    height: 120px;
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  .metodosdeenvio {
+    height: 120px;
+    img {
+      width: 100%;
+    }
+  }
+  
+  .derechos {
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+  }
