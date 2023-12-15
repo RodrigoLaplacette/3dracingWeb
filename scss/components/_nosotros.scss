@@ -1,0 +1,51 @@
+@import "../base/extends";
+
+
+.seccionnosotros {
+    height: 100%;
+    display: flex;
+    text-align: center;
+  }
+  
+  .nosotrostexto {
+    width: 100%;
+    padding: 2rem;
+  
+    h4 {
+      @extend %titulos;
+      color:$color-principal;
+    }
+  }
+  
+  .imgnosotros {
+    width: 80%;
+    padding: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+
+    .seccionnosotros {
+      height: 100%;
+      display: block;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .nosotrostexto {
+      width: 100%;
+  
+      h4 {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 20px;
+        color:$color-principal;
+      }
+    }
+  
+    .imgnosotros {
+      margin: auto;
+    }
+}

@@ -1,0 +1,18 @@
+@import "../base/variables";
+@import "../base/extends";
+
+.maintrabajos {
+    height:100%;
+  }
+
+body {
+    background-color: white;
+}
+
+.enlace {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}

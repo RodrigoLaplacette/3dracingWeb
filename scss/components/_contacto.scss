@@ -1,0 +1,97 @@
+@import "../base/variables";
+
+/**estilos para pagina de Contacto**/
+
+.containercontacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  
+    h4 {
+      font-family: Formula1-Bold;
+      font-size: 20px;
+      width: 500px;
+      color:$color-principal;
+    }
+  
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      input {
+        margin: 1%;
+        width: 48%;
+        height: 2rem;
+      }
+  
+      textarea {
+        height: 15rem;
+        width: 100%;
+        padding: 5px;
+      }
+  
+      .enviarconsulta {
+        background-color:$color-principal;
+        color: #fff;
+        height: 2rem;
+        font-size: 15px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px;
+        width: 20rem;
+        &:hover {
+          background-color: rgba(162, 162, 162, 0.912);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .containercontacto {
+      height: 100%;
+      width: 100%;
+      display: block;
+      text-align: center;
+      h4 {
+        width: 100%;
+        height: auto;
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+  
+      form {
+        display: block;
+        margin-bottom: 1rem;
+        input {
+          margin: 5px;
+          width: 80%;
+          height: 3rem;
+          padding: 20px;
+        }
+        textarea {
+          width: 80%;
+        }
+        .enviarconsulta {
+          height: 3rem;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .containercontacto h4 {
+      width: 100%;
+      height: auto;
+      font-size: 0.8rem;
+      padding: 1rem;
+    }
+  }
+  

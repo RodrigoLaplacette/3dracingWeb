@@ -36,6 +36,18 @@ header {
   margin-left: 25%;
   padding: 3rem;
 }
+.menu li:hover > ul {
+  display: block;
+}
+.menu li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+.menu li ul li a {
+  color: rgba(255, 166, 0, 0.922);
+  padding: 3px;
+}
 .menu ul {
   display: flex;
   gap: 1rem;
@@ -76,6 +88,53 @@ header {
   display: none;
 }
 
+@media only screen and (max-width: 900px) {
+  .menu {
+    opacity: 0;
+    width: 200px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    background-color: rgb(6, 74, 110);
+    gap: 2rem;
+    top: 10px;
+    right: 0;
+    height: 350px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: end;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10%;
+  }
+  .cerrar-menu {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+  }
+  .search-cart {
+    margin-left: 5%;
+    width: 100%;
+    gap: 3%;
+  }
+}
 .maininicio {
   background-color: rgb(255, 255, 255);
 }
@@ -114,7 +173,7 @@ header {
 .contenedor-envios {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(134, 141, 145, 0.912);
+  background-color: rgb(152, 151, 151);
   padding-bottom: 5%;
 }
 .contenedor-envios h3 {
@@ -168,8 +227,15 @@ header {
   width: auto;
   height: 40px;
 }
-.p-destacado .precio {
+.p-destacado .preciodestacado {
   font-weight: bold;
+  color: rgb(255, 15, 15);
+  text-decoration: line-through;
+}
+.p-destacado .poferta {
+  color: rgb(0, 128, 0);
+  font-weight: bolder;
+  font-size: 13px;
 }
 
 .aniadiralcarrito {
@@ -184,7 +250,7 @@ header {
   font-weight: bold; /* Texto en negrita */
 }
 .aniadiralcarrito:hover {
-  background-color: rgba(134, 141, 145, 0.912);
+  background-color: rgb(152, 151, 151);
 }
 
 .iratienda {
@@ -195,6 +261,70 @@ header {
   justify-content: end;
 }
 
+@media only screen and (max-width: 900px) {
+  .video video {
+    width: 90%;
+  }
+  .bienvenidostxt {
+    width: 90%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .conteinerdestacados {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .p-destacado {
+    width: 45%;
+    padding: 10px;
+  }
+  .p-destacado img {
+    width: 100%;
+  }
+  .p-destacado h4 {
+    width: 100%;
+    padding: 5px;
+  }
+  .p-destacado p {
+    padding: 5px;
+    font-size: 12px;
+    width: 100%;
+  }
+  .p-destacado .precio {
+    font-weight: bold;
+  }
+  .aniadiralcarrito {
+    height: 50px;
+    width: auto;
+    margin-top: 0;
+    padding: 5px;
+  }
+  .iratienda {
+    width: 95%;
+    text-align: end;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bienvenidostxt h1 {
+    font-size: 1.4rem;
+  }
+  .bienvenidostxt h1 p {
+    font-size: 0.8rem;
+  }
+  .bienvenidostxt h1 h4 {
+    height: auto;
+  }
+  .conteinerdestacados p {
+    height: auto;
+  }
+  .productos-destacados h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  .aniadiralcarrito {
+    font-size: 0.7rem;
+  }
+}
 /**estilos para el footer**/
 footer {
   background-color: rgb(6, 74, 110);
@@ -216,7 +346,7 @@ footer {
 
 .instagram,
 .whatsapp {
-  color: rgb(160, 160, 160);
+  color: rgb(152, 151, 151);
   font-size: 3rem;
 }
 
@@ -248,18 +378,49 @@ footer {
   text-align: center;
 }
 
-@font-face {
-  font-family: Formula1-Regular;
-  src: url(../fuentes/Formula1-Regular.ttf);
+@media only screen and (max-width: 900px) {
+  footer {
+    height: 200px;
+  }
 }
-@font-face {
-  font-family: Formula1-Bold;
-  src: url(../fuentes/Formula1-Bold.ttf);
+@media only screen and (max-width: 600px) {
+  footer {
+    height: 420px;
+  }
+  .containerfooter {
+    display: block;
+  }
+  .redes {
+    display: flex;
+    padding: 10px;
+    height: auto;
+    width: 50%;
+  }
+  .titulosfooter {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .metodosdepago {
+    padding: 10px;
+    width: 90%;
+    height: auto;
+  }
+  .metodosdepago img {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .metodosdeenvio {
+    max-width: 40%;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .metodosdeenvio img {
+    max-width: 100%;
+  }
+  .derechos {
+    margin-top: 5%;
+  }
 }
-body {
-  font-family: Formula1-Regular;
-}
-
 /**estilos pagina de Productos**/
 .titulosecciones {
   font-family: Formula1-Bold;
@@ -302,8 +463,8 @@ body {
 }
 
 .precio {
-  font-weight: 900;
-  color: rgb(75, 75, 77);
+  font-weight: bold;
+  color: rgb(0, 128, 0);
   font-family: Formula1-Bold;
 }
 
@@ -311,197 +472,7 @@ body {
   margin-bottom: 6rem;
 }
 
-/**estilos pagina Nosotros**/
-.seccionnosotros {
-  height: 100%;
-  display: flex;
-  text-align: center;
-}
-
-.nosotrostexto {
-  width: 100%;
-  padding: 2rem;
-}
-.nosotrostexto h4 {
-  font-family: Formula1-Bold;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  font-size: 20px;
-  color: rgba(5, 68, 101, 0.912);
-}
-
-.imgnosotros {
-  width: 80%;
-  padding: 2rem;
-}
-.imgnosotros img {
-  width: 100%;
-}
-
-/**estilos pagina Servicios**/
-.seccionservicios {
-  height: 100%;
-  padding: 2rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-.serviciostexto {
-  width: 100%;
-}
-.serviciostexto h4 {
-  font-family: Formula1-Bold;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  font-size: 20px;
-  color: rgba(5, 68, 101, 0.912);
-}
-
-.imgservicios {
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-.imgservicios img {
-  width: 95%;
-}
-
-/**estilos para pagina de Contacto**/
-.containercontacto {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  padding: 20px;
-}
-.containercontacto h4 {
-  font-family: Formula1-Bold;
-  font-size: 20px;
-  width: 500px;
-  color: rgba(5, 68, 101, 0.912);
-}
-.containercontacto form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.containercontacto form input {
-  margin: 1%;
-  width: 48%;
-  height: 2rem;
-}
-.containercontacto form textarea {
-  height: 15rem;
-  width: 100%;
-  padding: 5px;
-}
-.containercontacto form .enviarconsulta {
-  background-color: rgb(5, 67, 101);
-  color: #fff;
-  height: 2rem;
-  font-size: 15px;
-  border: none;
-  border-radius: 4px;
-  margin: 5px;
-  width: 20rem;
-}
-.containercontacto form .enviarconsulta:hover {
-  background-color: rgba(162, 162, 162, 0.912);
-}
-
 @media only screen and (max-width: 900px) {
-  .menu {
-    opacity: 0;
-    width: 200px;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    background-color: rgb(5, 67, 101);
-    gap: 2rem;
-    top: 10px;
-    right: 0;
-    height: 350px;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-  }
-  .menu ul {
-    flex-direction: column;
-    align-items: end;
-  }
-  .menu a {
-    font-size: 1rem;
-  }
-  .visible {
-    opacity: 1;
-    visibility: visible;
-  }
-  .abrir-menu,
-  .cerrar-menu {
-    display: block;
-    border: 0;
-    font-size: 2rem;
-    background-color: transparent;
-    cursor: pointer;
-    margin-right: 10%;
-  }
-  .cerrar-menu {
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-  }
-  .search-cart {
-    margin-left: 5%;
-    width: 100%;
-    gap: 3%;
-  }
-  .video video {
-    width: 90%;
-  }
-  .bienvenidostxt {
-    width: 90%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-  .conteinerdestacados {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .p-destacado {
-    width: 45%;
-    padding: 10px;
-  }
-  .p-destacado img {
-    width: 100%;
-  }
-  .p-destacado h4 {
-    width: 100%;
-    padding: 5px;
-  }
-  .p-destacado p {
-    padding: 5px;
-    font-size: 12px;
-    width: 100%;
-  }
-  .p-destacado .precio {
-    font-weight: bold;
-  }
-  .aniadiralcarrito {
-    height: 50px;
-    width: auto;
-    margin-top: 0;
-    padding: 5px;
-  }
-  .iratienda {
-    width: 95%;
-    text-align: end;
-  }
-  footer {
-    height: 200px;
-  }
   .producto-tienda {
     width: 30%;
   }
@@ -534,6 +505,56 @@ body {
     height: 25px;
     width: 100%;
   }
+}
+@media only screen and (max-width: 600px) {
+  .producto-tienda {
+    width: 50%;
+    padding: 2%;
+  }
+  .tienda img {
+    width: 100%;
+  }
+  .tienda h4 {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+  }
+  .tienda p {
+    font-size: 12px;
+    height: auto;
+    width: auto;
+  }
+}
+.serviciostexto h4, .nosotrostexto h4 {
+  font-family: Formula1-Bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+.seccionnosotros {
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.nosotrostexto {
+  width: 100%;
+  padding: 2rem;
+}
+.nosotrostexto h4 {
+  color: rgb(6, 74, 110);
+}
+
+.imgnosotros {
+  width: 80%;
+  padding: 2rem;
+}
+.imgnosotros img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
   .seccionnosotros {
     height: 100%;
     display: block;
@@ -547,16 +568,120 @@ body {
     margin-bottom: 2rem;
     margin-top: 2rem;
     font-size: 20px;
-    color: rgba(5, 68, 101, 0.912);
+    color: rgb(6, 74, 110);
   }
   .imgnosotros {
     margin: auto;
   }
+}
+.serviciostexto h4, .nosotrostexto h4 {
+  font-family: Formula1-Bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+/**estilos pagina Servicios**/
+.seccionservicios {
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.serviciostexto {
+  width: 100%;
+}
+.serviciostexto h4 {
+  color: rgb(6, 74, 110);
+}
+
+.imgservicios {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.imgservicios img {
+  width: 95%;
+}
+
+@media only screen and (max-width: 900px) {
   .seccionservicios {
     display: block;
     text-align: center;
     align-items: center;
   }
+}
+.nosotrostexto h4, .serviciostexto h4 {
+  font-family: Formula1-Bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+.maintrabajos {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+}
+
+.enlace {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}
+
+/**estilos para pagina de Contacto**/
+.containercontacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.containercontacto h4 {
+  font-family: Formula1-Bold;
+  font-size: 20px;
+  width: 500px;
+  color: rgb(6, 74, 110);
+}
+.containercontacto form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.containercontacto form input {
+  margin: 1%;
+  width: 48%;
+  height: 2rem;
+}
+.containercontacto form textarea {
+  height: 15rem;
+  width: 100%;
+  padding: 5px;
+}
+.containercontacto form .enviarconsulta {
+  background-color: rgb(6, 74, 110);
+  color: #fff;
+  height: 2rem;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  width: 20rem;
+}
+.containercontacto form .enviarconsulta:hover {
+  background-color: rgba(162, 162, 162, 0.912);
+}
+
+@media only screen and (max-width: 900px) {
   .containercontacto {
     height: 100%;
     width: 100%;
@@ -588,84 +713,23 @@ body {
   }
 }
 @media only screen and (max-width: 600px) {
-  .bienvenidostxt h1 {
-    font-size: 1.4rem;
-  }
-  .bienvenidostxt h1 p {
-    font-size: 0.8rem;
-  }
-  .bienvenidostxt h1 h4 {
-    height: auto;
-  }
-  .conteinerdestacados p {
-    height: auto;
-  }
-  .productos-destacados h3 {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  .aniadiralcarrito {
-    font-size: 0.7rem;
-  }
-  footer {
-    height: 420px;
-  }
-  .containerfooter {
-    display: block;
-  }
-  .redes {
-    display: flex;
-    padding: 10px;
-    height: auto;
-    width: 50%;
-  }
-  .titulosfooter {
-    padding: 10px;
-    font-size: 15px;
-  }
-  .metodosdepago {
-    padding: 10px;
-    width: 90%;
-    height: auto;
-  }
-  .metodosdepago img {
-    display: inline-block;
-    max-width: 100%;
-  }
-  .metodosdeenvio {
-    max-width: 40%;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-  .metodosdeenvio img {
-    max-width: 100%;
-  }
-  .derechos {
-    margin-top: 5%;
-  }
-  .producto-tienda {
-    width: 50%;
-    padding: 2%;
-  }
-  .tienda img {
-    width: 100%;
-  }
-  .tienda h4 {
-    font-size: 14px;
-    width: auto;
-    height: auto;
-  }
-  .tienda p {
-    font-size: 12px;
-    height: auto;
-    width: auto;
-  }
   .containercontacto h4 {
     width: 100%;
     height: auto;
     font-size: 0.8rem;
     padding: 1rem;
   }
+}
+@font-face {
+  font-family: Formula1-Regular;
+  src: url(../fuentes/Formula1-Regular.ttf);
+}
+@font-face {
+  font-family: Formula1-Bold;
+  src: url(../fuentes/Formula1-Bold.ttf);
+}
+body {
+  font-family: Formula1-Regular;
 }
 
 /*# sourceMappingURL=styles.css.map */

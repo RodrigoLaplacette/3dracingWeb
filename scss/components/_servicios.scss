@@ -1,0 +1,40 @@
+@import "../base/variables";
+@import "../base/extends";
+/**estilos pagina Servicios**/
+
+.seccionservicios {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .serviciostexto {
+    width: 100%;
+  
+    h4 {
+      @extend %titulos;
+      color:$color-principal;
+    }
+  }
+  
+  .imgservicios {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  
+    img {
+      width: 95%;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .seccionservicios {
+      display: block;
+      text-align: center;
+      align-items: center;
+    }
+}
+  

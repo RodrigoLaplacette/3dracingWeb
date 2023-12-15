@@ -21,7 +21,7 @@ footer {
   
   .instagram,
   .whatsapp {
-    color: rgb(160, 160, 160);
+    color: $color-secundario;
     font-size: 3rem;
   }
   
@@ -52,3 +52,53 @@ footer {
     margin-top: 30px;
     text-align: center;
   }
+
+  @media only screen and (max-width: 900px) {
+
+    footer {
+      height: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    footer {
+      height: 420px;
+    }
+    .containerfooter {
+      display: block;
+    }
+    .redes {
+      display: flex;
+      padding: 10px;
+      height: auto;
+      width: 50%;
+    }
+    .titulosfooter {
+      padding: 10px;
+      font-size: 15px;
+    }
+    .metodosdepago {
+      padding: 10px;
+      width: 90%;
+      height: auto;
+      img {
+        display: inline-block;
+      max-width: 100%;
+    }
+      }
+    
+    .metodosdeenvio {
+      max-width: 40%;
+      margin-top: 10px;
+      margin-left: 10px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .derechos {
+      margin-top: 5%;
+    }
+  }
+  
+
+  

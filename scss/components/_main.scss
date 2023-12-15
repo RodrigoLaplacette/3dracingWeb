@@ -1,5 +1,5 @@
 @import "../base/variables";
-
+@import "../base/maps";
 .maininicio {
     background-color: rgb(255, 255, 255);
   }
@@ -41,7 +41,7 @@
   .contenedor-envios {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(134, 141, 145, 0.912);
+    background-color:$color-secundario;
     padding-bottom: 5%;
   
     h3 {
@@ -102,14 +102,24 @@
       height: 40px;
     }
   
-    .precio {
+    .preciodestacado {
       font-weight: bold;
+      color:map-get($map: $cajaproductos, $key:colorprecio );
+      text-decoration: line-through;
+    }
+
+    .poferta {
+      color: map-get($map: $cajaproductos, $key:coloroferta );
+      font-weight: bolder;
+      font-size: map-get($map: $cajaproductos , $key:tamanio );
+
+
     }
   }
   
   .aniadiralcarrito {
     &:hover {
-      background-color: rgba(134, 141, 145, 0.912);
+      background-color: $color-secundario;
     }
     font-family: Formula1-Bold;
     height: 50px;
@@ -128,4 +138,84 @@
     height: 55px;
     margin-bottom: 20px;
     justify-content: end;
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .video video {
+      width: 90%;
+    }
+  
+    .bienvenidostxt {
+      width: 90%;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  
+    .conteinerdestacados {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .p-destacado {
+      width: 45%;
+      padding: 10px;
+  
+      img {
+        width: 100%;
+      }
+  
+      h4 {
+        width: 100%;
+        padding: 5px;
+      }
+  
+      p {
+        padding: 5px;
+        font-size: 12px;
+        width: 100%;
+      }
+  
+      .precio {
+        font-weight: bold;
+      }
+    }
+  
+    .aniadiralcarrito {
+      height: 50px;
+      width: auto;
+      margin-top: 0;
+      padding: 5px;
+    }
+  
+    .iratienda {
+      width: 95%;
+      text-align: end;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .bienvenidostxt h1 {
+      font-size: 1.4rem;
+  
+      p {
+        font-size: 0.8rem;
+      }
+      h4 {
+        height: auto;
+      }
+    }
+  
+    .conteinerdestacados p {
+      height: auto;
+    }
+  
+    .productos-destacados h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+  
+    .aniadiralcarrito {
+      font-size: 0.7rem;
+    }
   }
