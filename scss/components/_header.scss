@@ -39,10 +39,13 @@ header {
         display: none;
         position: absolute;
         min-width: 140px;
+        text-align: start;
+
+        padding: 0;
       li {
         a {
           color: rgba(255, 166, 0, 0.922);
-          padding: 3px;
+          
         }
       }
       }
@@ -93,7 +96,7 @@ header {
   @media only screen and (max-width: 900px) {
     .menu {
       opacity: 0;
-      width: 200px;
+      width: 150px;
       visibility: hidden;
       display: flex;
       flex-direction: column;
@@ -103,13 +106,29 @@ header {
       gap: 2rem;
       top: 10px;
       right: 0;
-      height: 350px;
+      height: 400px;
       box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
-      padding: 2rem;
+      
+
+      li{
+        
+        ul {
+          position: relative;
+          min-width: 100%;
+          text-align: end;
+          padding: 10px;
+        li {
+          a {
+            color: rgba(218, 166, 9, 0.922);
+            
+          }
+        }
+        }
+      }
   
       ul {
         flex-direction: column;
-        align-items: end;
+        align-items: center;
       }
   
       a {

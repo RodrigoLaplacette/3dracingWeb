@@ -43,10 +43,11 @@ header {
   display: none;
   position: absolute;
   min-width: 140px;
+  text-align: start;
+  padding: 0;
 }
 .menu li ul li a {
   color: rgba(255, 166, 0, 0.922);
-  padding: 3px;
 }
 .menu ul {
   display: flex;
@@ -91,7 +92,7 @@ header {
 @media only screen and (max-width: 900px) {
   .menu {
     opacity: 0;
-    width: 200px;
+    width: 150px;
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -101,13 +102,21 @@ header {
     gap: 2rem;
     top: 10px;
     right: 0;
-    height: 350px;
+    height: 400px;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-    padding: 2rem;
+  }
+  .menu li ul {
+    position: relative;
+    min-width: 100%;
+    text-align: end;
+    padding: 10px;
+  }
+  .menu li ul li a {
+    color: rgba(218, 166, 9, 0.922);
   }
   .menu ul {
     flex-direction: column;
-    align-items: end;
+    align-items: center;
   }
   .menu a {
     font-size: 1rem;
@@ -179,6 +188,9 @@ header {
 .contenedor-envios h3 {
   color: rgb(255, 255, 255);
 }
+.contenedor-envios p {
+  font-weight: bold;
+}
 
 .logoscompras {
   padding-top: 3%;
@@ -220,12 +232,18 @@ header {
 }
 .p-destacado h4 {
   width: auto;
-  height: 45px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
 }
 .p-destacado p {
   font-size: 12px;
   width: auto;
-  height: 40px;
+}
+.p-destacado .descripcion-producto {
+  height: 22px;
+  font-weight: bold;
 }
 .p-destacado .preciodestacado {
   font-weight: bold;
@@ -240,6 +258,7 @@ header {
 
 .aniadiralcarrito {
   font-family: Formula1-Bold;
+  font-size: 13px;
   height: 50px;
   width: 150px;
   background-color: rgb(6, 74, 110);
@@ -286,7 +305,7 @@ header {
     padding: 5px;
   }
   .p-destacado p {
-    padding: 5px;
+    padding: 2px;
     font-size: 12px;
     width: 100%;
   }
@@ -312,9 +331,6 @@ header {
     font-size: 0.8rem;
   }
   .bienvenidostxt h1 h4 {
-    height: auto;
-  }
-  .conteinerdestacados p {
     height: auto;
   }
   .productos-destacados h3 {
@@ -352,7 +368,8 @@ footer {
 
 .titulosfooter {
   color: rgb(255, 255, 255);
-  padding: 15px;
+  padding-top: 20px;
+  font-size: 14px;
 }
 
 .metodosdepago {
@@ -361,14 +378,17 @@ footer {
   height: 120px;
 }
 .metodosdepago img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .metodosdeenvio {
   height: 120px;
 }
 .metodosdeenvio img {
-  width: 100%;
+  max-width: 80%;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 0);
 }
 
 .derechos {
@@ -399,6 +419,7 @@ footer {
   .titulosfooter {
     padding: 10px;
     font-size: 15px;
+    width: 250px;
   }
   .metodosdepago {
     padding: 10px;
@@ -422,6 +443,12 @@ footer {
   }
 }
 /**estilos pagina de Productos**/
+.migasdepan {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+}
+
 .titulosecciones {
   font-family: Formula1-Bold;
   background-color: rgb(152, 151, 151);
@@ -429,7 +456,7 @@ footer {
   font-size: 3rem;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   padding-top: 150px;
 }
 
@@ -622,18 +649,6 @@ footer {
 
 .maintrabajos {
   height: 100%;
-}
-
-body {
-  background-color: white;
-}
-
-.enlace {
-  display: flex;
-  align-items: center;
-  width: 500px;
-  height: 500px;
-  background-color: black;
 }
 
 /**estilos para pagina de Contacto**/

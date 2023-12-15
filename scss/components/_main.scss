@@ -47,6 +47,10 @@
     h3 {
       color: rgb(255, 255, 255);
     }
+
+    p{
+      font-weight: bold;
+    }
   }
   
   .logoscompras {
@@ -93,13 +97,21 @@
   
     h4 {
       width: auto;
-      height: 45px;
+      height: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 5px;
     }
   
     p {
       font-size: 12px;
       width: auto;
-      height: 40px;
+    }
+
+    .descripcion-producto {
+      height: 22px;
+      font-weight: bold;
+
     }
   
     .preciodestacado {
@@ -122,6 +134,7 @@
       background-color: $color-secundario;
     }
     font-family: Formula1-Bold;
+    font-size: 13px;
     height: 50px;
     width: 150px;
     background-color: $color-principal;
@@ -171,7 +184,7 @@
       }
   
       p {
-        padding: 5px;
+        padding: 2px;
         font-size: 12px;
         width: 100%;
       }
@@ -204,10 +217,6 @@
       h4 {
         height: auto;
       }
-    }
-  
-    .conteinerdestacados p {
-      height: auto;
     }
   
     .productos-destacados h3 {
