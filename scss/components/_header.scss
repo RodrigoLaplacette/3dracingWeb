@@ -11,12 +11,42 @@ header {
   }
   
   .menucontainer {
-    height: auto;
+    height: 200px;
     position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .f1animado {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: auto;
+    img {
+      width: 10%;
+      position: relative;
+      opacity: 0;
+      animation: desplazamiento 10s linear infinite; /* Ajusta la duración según tu preferencia */
+      @keyframes desplazamiento {
+        0% {
+            left: -80%;
+            opacity: 0;
+        
+        }
+        1%{
+            opacity: 10;
+      
+        }
+        
+        100% {
+            left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+     
+        }
+      }
+    }
+
   }
   
   .racing-logo {
@@ -161,4 +191,49 @@ header {
       width: 100%;
       gap: 3%;
     }
+  
+
+  .f1animado {
+    img {
+      @keyframes desplazamiento {
+        0% {
+            left: -80%;
+            opacity: 0;
+        }
+        1%{
+            opacity: 10;
+            width: 15%;
+        }
+        
+        100% {
+            left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+            width: 15%;
+        }
+            }
+    }
+
+  }
+  
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .f1animado {
+      img {
+        @keyframes desplazamiento {
+          0% {
+              left: -80%;
+              opacity: 0;
+          }
+          1%{
+              opacity: 10;
+              width: 25%;
+          }
+          
+          100% {
+              left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+              width: 25%;
+          }
+              }
+      }
+  }
   }

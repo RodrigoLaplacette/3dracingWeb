@@ -16,12 +16,37 @@ header {
 }
 
 .menucontainer {
-  height: auto;
+  height: 200px;
   position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.f1animado {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: auto;
+}
+.f1animado img {
+  width: 10%;
+  position: relative;
+  opacity: 0;
+  animation: desplazamiento 10s linear infinite; /* Ajusta la duración según tu preferencia */
+}
+@keyframes desplazamiento {
+  0% {
+    left: -80%;
+    opacity: 0;
+  }
+  1% {
+    opacity: 10;
+  }
+  100% {
+    left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+  }
 }
 
 .racing-logo {
@@ -142,6 +167,36 @@ header {
     margin-left: 5%;
     width: 100%;
     gap: 3%;
+  }
+  @keyframes desplazamiento {
+    0% {
+      left: -80%;
+      opacity: 0;
+    }
+    1% {
+      opacity: 10;
+      width: 15%;
+    }
+    100% {
+      left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+      width: 15%;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  @keyframes desplazamiento {
+    0% {
+      left: -80%;
+      opacity: 0;
+    }
+    1% {
+      opacity: 10;
+      width: 25%;
+    }
+    100% {
+      left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+      width: 25%;
+    }
   }
 }
 .maininicio {
@@ -649,6 +704,23 @@ footer {
 
 .maintrabajos {
   height: 100%;
+}
+
+.contenedor-trabajos {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Espacio entre los trabajos*/
+  text-align: center;
+}
+
+.trabajo-muestra {
+  width: 300px;
+  height: 400px;
+}
+.trabajo-muestra img {
+  width: 100%;
 }
 
 /**estilos para pagina de Contacto**/
