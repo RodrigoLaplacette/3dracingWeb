@@ -1,0 +1,244 @@
+@import "../base/variables";
+@import "../base/maps";
+.maininicio {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /**estilos seccion1**/
+  .video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+  
+    video {
+      width: 80%;
+      pointer-events: none;
+    }
+  }
+  
+  .bienvenidostxt {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+  
+    h1 {
+      font-family: Formula1-Bold;
+      font-size: 2rem;
+      padding-bottom: 2%;
+      text-align: center;
+      color: $color-principal;
+    }
+  
+    p {
+      text-align: center;
+    }
+  }
+  
+  /**estilos seccion2**/
+  .contenedor-envios {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:$color-secundario;
+    padding-bottom: 5%;
+  
+    h3 {
+      color: rgb(255, 255, 255);
+    }
+
+    p{
+      font-weight: bold;
+    }
+  }
+  
+  .logoscompras {
+    padding-top: 3%;
+    text-align: center;
+    flex: auto;
+  
+    img {
+      width: 5rem;
+    }
+  }
+  
+  /**estilos seccion3**/
+  
+  .productos-destacados {
+    width: 100%;
+    height: auto;
+  
+    h3 {
+      font-family: Formula1-Bold;
+      text-align: center;
+      font-size: 2rem;
+      color: $color-principal;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  .conteinerdestacados {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  
+  .p-destacado {
+    width: 20%;
+    padding: 10px;
+  
+    img {
+      width: 100%;
+    }
+  
+    h4 {
+      width: auto;
+      height: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 5px;
+    }
+  
+    p {
+      font-size: 12px;
+      width: auto;
+    }
+
+    .descripcion-producto {
+      height: 22px;
+      font-weight: bold;
+
+    }
+  
+    .preciodestacado {
+      font-weight: bold;
+      color:map-get($map: $cajaproductos, $key:colorprecio );
+      text-decoration: line-through;
+    }
+
+    .poferta {
+      color: map-get($map: $cajaproductos, $key:coloroferta );
+      font-weight: bolder;
+      font-size: map-get($map: $cajaproductos , $key:tamanio );
+
+
+    }
+  }
+  
+  .aniadiralcarrito {
+    &:hover {
+      background-color: $color-secundario;
+    }
+    font-family: Formula1-Bold;
+    font-size: 13px;
+    height: 50px;
+    width: 150px;
+    background-color: $color-principal;
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .iratienda {
+    display: flex;
+    width: 95%;
+    height: 55px;
+    margin-bottom: 20px;
+    justify-content: end;
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .video video {
+      width: 90%;
+    }
+  
+    .bienvenidostxt {
+      width: 90%;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  
+    .conteinerdestacados {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .p-destacado {
+      width: 45%;
+      padding: 10px;
+  
+      img {
+        width: 100%;
+      }
+  
+      h4 {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+      }
+  
+      p {
+        padding: 2px;
+        font-size: 12px;
+        width: 100%;
+      }
+  
+      .precio {
+        font-weight: bold;
+      }
+    }
+  
+    .aniadiralcarrito {
+      height: 50px;
+      width: auto;
+      margin-top: 0;
+      padding: 5px;
+    }
+  
+    .iratienda {
+      width: 95%;
+      text-align: end;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .bienvenidostxt  {
+      h1 {
+      font-size: 1.4rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      h4 {
+        height: auto;
+      }
+    }
+  
+    .productos-destacados {
+      h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+  }
+
+  .p-destacado {
+    h4{
+      font-size: 0.8rem;
+    }
+
+    p {
+     font-size:0.6rem;
+    }
+  }
+  
+    .aniadiralcarrito {
+      font-size: 0.7rem;
+    }
+  }

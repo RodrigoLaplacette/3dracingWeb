@@ -89,6 +89,95 @@ header {
 }
 
 
+<<<<<<< Updated upstream
+=======
+@media only screen and (max-width: 900px) {
+  .menu {
+    opacity: 0;
+    width: 150px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    background-color: rgb(6, 74, 110);
+    gap: 2rem;
+    top: 10px;
+    right: 0;
+    height: 400px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .menu li ul {
+    display: block;
+    position: relative;
+    min-width: 100%;
+    text-align: end;
+    padding-top: 15px;
+  }
+  .menu li ul li a {
+    color: rgb(245, 245, 245);
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10%;
+  }
+  .cerrar-menu {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+  }
+  .search-cart {
+    margin-left: 5%;
+    width: 100%;
+    gap: 3%;
+  }
+  @keyframes desplazamiento {
+    0% {
+      left: -80%;
+      opacity: 0;
+    }
+    1% {
+      opacity: 10;
+      width: 15%;
+    }
+    100% {
+      left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+      width: 15%;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  @keyframes desplazamiento {
+    0% {
+      left: -80%;
+      opacity: 0;
+    }
+    1% {
+      opacity: 10;
+      width: 25%;
+    }
+    100% {
+      left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
+      width: 25%;
+    }
+  }
+}
+>>>>>>> Stashed changes
 .maininicio {
     background-color:rgb(255, 255, 255);
 }
@@ -189,10 +278,83 @@ header {
 }
 
 .p-destacado p {
+<<<<<<< Updated upstream
     padding: 2%;
+=======
+  font-size: 12px;
+  width: auto;
+}
+.p-destacado .descripcion-producto {
+  height: 22px;
+  font-weight: bold;
+}
+.p-destacado .preciodestacado {
+  font-weight: bold;
+  color: rgb(255, 15, 15);
+  text-decoration: line-through;
+}
+.p-destacado .poferta {
+  color: rgb(0, 128, 0);
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+.aniadiralcarrito {
+  font-family: Formula1-Bold;
+  font-size: 13px;
+  height: 50px;
+  width: 150px;
+  background-color: rgb(6, 74, 110);
+  color: #fff; /* Color del texto */
+  border: none; /* Elimina el borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-weight: bold; /* Texto en negrita */
+}
+.aniadiralcarrito:hover {
+  background-color: rgb(152, 151, 151);
+}
+
+.iratienda {
+  display: flex;
+  width: 95%;
+  height: 55px;
+  margin-bottom: 20px;
+  justify-content: end;
+}
+
+@media only screen and (max-width: 900px) {
+  .video video {
+    width: 90%;
+  }
+  .bienvenidostxt {
+    width: 90%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .conteinerdestacados {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .p-destacado {
+    width: 45%;
+    padding: 10px;
+  }
+  .p-destacado img {
+    width: 100%;
+  }
+  .p-destacado h4 {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+  .p-destacado p {
+    padding: 2px;
+>>>>>>> Stashed changes
     font-size: 12px;
     width: 100%;
 }
+<<<<<<< Updated upstream
 
 .p-destacado .precio {
     font-weight: bold;
@@ -213,6 +375,31 @@ header {
 
 .añadiralcarrito:hover{
     background-color: rgba(134, 141, 145, 0.912);
+=======
+@media only screen and (max-width: 600px) {
+  .bienvenidostxt h1 {
+    font-size: 1.4rem;
+  }
+  .bienvenidostxt p {
+    font-size: 0.8rem;
+  }
+  .bienvenidostxt h4 {
+    height: auto;
+  }
+  .productos-destacados h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  .p-destacado h4 {
+    font-size: 0.8rem;
+  }
+  .p-destacado p {
+    font-size: 0.6rem;
+  }
+  .aniadiralcarrito {
+    font-size: 0.7rem;
+  }
+>>>>>>> Stashed changes
 }
 /**estilos para el footer**/
 footer {
@@ -303,7 +490,16 @@ footer {
 }
 
 .tienda h4 {
+<<<<<<< Updated upstream
     margin-top: 2rem;
+=======
+  font-weight: bold;
+  font-size: 14px;
+  width: 70%;
+  height: 45px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+>>>>>>> Stashed changes
 }
 
 .tienda p {
@@ -380,9 +576,86 @@ height: 100%;
 }
 
 .imgservicios img {
+<<<<<<< Updated upstream
 width: 95%;
+=======
+  width: 95%;
 }
 
+@media only screen and (max-width: 900px) {
+  .seccionservicios {
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+}
+.nosotrostexto h4, .serviciostexto h4 {
+  font-family: Formula1-Bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+.maintrabajos {
+  height: 100%;
+}
+
+.contenedor-trabajos {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Espacio entre los trabajos*/
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.trabajo-muestra {
+  width: 300px;
+  height: 400px;
+}
+.trabajo-muestra img {
+  width: 100%;
+>>>>>>> Stashed changes
+}
+
+@media only screen and (max-width: 900px) {
+  .contenedor-trabajos {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2%; /* Espacio entre los trabajos*/
+    text-align: center;
+  }
+  .trabajo-muestra {
+    width: 100%;
+    height: auto;
+  }
+  .trabajo-muestra img {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contenedor-trabajos {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2%; /* Espacio entre los trabajos*/
+    text-align: center;
+  }
+  .trabajo-muestra {
+    width: 100%;
+    height: auto;
+  }
+  .trabajo-muestra img {
+    width: 80%;
+  }
+  .trabajo-muestra p {
+    font-size: 0.6rem;
+  }
+}
 /**estilos para pagina de Contacto**/
 
 
