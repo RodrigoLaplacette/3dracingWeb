@@ -382,15 +382,18 @@ header {
   .bienvenidostxt h1 {
     font-size: 1.4rem;
   }
-  .bienvenidostxt h1 p {
+  .bienvenidostxt p {
     font-size: 0.8rem;
   }
-  .bienvenidostxt h1 h4 {
+  .bienvenidostxt h4 {
     height: auto;
   }
   .productos-destacados h3 {
     font-size: 1.2rem;
     margin-top: 20px;
+  }
+  .p-destacado h4 {
+    font-size: 0.8rem;
   }
   .aniadiralcarrito {
     font-size: 0.7rem;
@@ -537,6 +540,7 @@ footer {
   height: 45px;
   margin-bottom: 5px;
   margin-top: 5px;
+  font-weight: bold;
 }
 .tienda p {
   font-size: 12px;

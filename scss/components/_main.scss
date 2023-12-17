@@ -208,9 +208,10 @@
   }
 
   @media only screen and (max-width: 600px) {
-    .bienvenidostxt h1 {
+    .bienvenidostxt {
+      h1{
       font-size: 1.4rem;
-  
+      }
       p {
         font-size: 0.8rem;
       }
@@ -219,10 +220,19 @@
       }
     }
   
-    .productos-destacados h3 {
+    .productos-destacados{ 
+    
+    h3 {
       font-size: 1.2rem;
       margin-top: 20px;
     }
+  }
+
+  .p-destacado {
+    h4{
+      font-size: 0.8rem;
+    }
+  }
   
     .aniadiralcarrito {
       font-size: 0.7rem;
