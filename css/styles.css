@@ -544,7 +544,6 @@ footer {
   font-weight: bold;
 }
 .tienda .p-descripcion {
-  height: 35px;
   margin-top: 5px;
   font-size: 12px;
 }
@@ -582,7 +581,7 @@ footer {
   }
   .tienda .p-descripcion {
     font-size: 12px;
-    height: 70px;
+    height: auto;
     width: 70%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -604,12 +603,12 @@ footer {
   .tienda img {
     width: 100%;
   }
-  .tienda h4 {
-    font-size: 14px;
+  .tienda .titulo-producto {
+    font-size: 12px;
     width: auto;
     height: auto;
   }
-  .tienda p {
+  .tienda .p-descripcion {
     font-size: 12px;
     height: auto;
     width: auto;
