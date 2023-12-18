@@ -3,6 +3,7 @@
 
 .maintrabajos {
       height:100%;
+      margin-bottom: 50px;
     h2 {
       text-align: center;
       color: $color-principal;
@@ -18,16 +19,25 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 10px; /* Espacio entre los trabajos*/
+    
     text-align: center;
     margin: auto;
+    overflow: hidden;
   }
 
   .trabajo-muestra {
     width: 250px;
     height: 350px;
+    margin-bottom: 60px;
+    padding: 10px;
     img {
-      width:100% ;
+      height:100%;
+      object-fit: cover;
+    }
+
+    p{
+      font-size: 0.7rem;
+      font-weight: 600;
     }
 
   }
@@ -44,7 +54,7 @@
 
 
     .contenedor-trabajos {
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
     }
     p{
       font-size: 0.9rem;

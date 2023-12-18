@@ -544,7 +544,7 @@ footer {
   font-weight: bold;
 }
 .tienda .p-descripcion {
-  height: 30px;
+  height: 35px;
   margin-top: 5px;
   font-size: 12px;
 }
@@ -712,6 +712,7 @@ footer {
 
 .maintrabajos {
   height: 100%;
+  margin-bottom: 50px;
 }
 .maintrabajos h2 {
   text-align: center;
@@ -727,17 +728,24 @@ footer {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 10px; /* Espacio entre los trabajos*/
   text-align: center;
   margin: auto;
+  overflow: hidden;
 }
 
 .trabajo-muestra {
   width: 250px;
   height: 350px;
+  margin-bottom: 60px;
+  padding: 10px;
 }
 .trabajo-muestra img {
-  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.trabajo-muestra p {
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 900px) {
@@ -745,7 +753,7 @@ footer {
     font-size: 1.4rem;
   }
   .contenedor-trabajos {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
   }
   p {
     font-size: 0.9rem;
