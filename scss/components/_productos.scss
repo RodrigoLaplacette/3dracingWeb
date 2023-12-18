@@ -10,7 +10,7 @@
 
 .titulosecciones {
     font-family: Formula1-Bold;
-    background-color: $color-secundario;
+    background:linear-gradient(90deg, rgb(83, 83, 83) 0%, rgb(144, 143, 143) 100%);
     padding: 3%;
     font-size: 3rem;
     @include card (rgb(255, 255, 255), 2px 2px 2px rgb(0, 0, 0));
@@ -35,7 +35,7 @@
       width: 100%;
     }
   
-    h4 {
+    .titulo-producto {
       font-size: 14px;
       width: 70%;
       height: 45px;
@@ -43,19 +43,24 @@
       margin-top: 5px;
       font-weight: bold;
     }
-  
-    p {
+
+    .p-descripcion {
+      height: 30px;
+      margin-top: 5px;
       font-size: 12px;
-      height: 50px;
-      width: 100%;
+    }
+  
+    .precio {
+      font-weight: bold;
+      color: rgb(0, 128, 0);
+      font-family: Formula1-Bold;
+      font-size: 12px;
+      height: auto;
+      width: auto;
+      padding-top: 25px;
     }
   }
   
-  .precio {
-    font-weight: bold;
-    color: rgb(0, 128, 0);
-    font-family: Formula1-Bold;
-  }
   
   .tienda button {
     margin-bottom: 6rem;
@@ -75,7 +80,7 @@
       width: 100%;
       margin-bottom: 20px;
   
-      h4 {
+      .titulo-producto {
         font-size: 14px;
         width: 100%;
         height: 40px;
@@ -83,24 +88,25 @@
         margin-top: 5px;
       }
   
-      p {
+      .p-descripcion {
         font-size: 12px;
         height: 70px;
         width: 70%;
         margin-top: 5px;
         margin-bottom: 5px;
       }
+
+      .precio {
+        height: 25px;
+        width: 100%;
+      }
   
       button {
+        margin-top: 10px;
         margin-bottom: 0;
       }
     }
   
-    .producto-tienda .precio {
-      margin-top: 5px;
-      height: 25px;
-      width: 100%;
-    }
   }  
 
   @media only screen and (max-width: 600px) {

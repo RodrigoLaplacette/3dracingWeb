@@ -1,5 +1,17 @@
 @import "../base/variables";
 
+@keyframes animaciongradiente {
+  from {
+    background:linear-gradient(90deg, $color-secundario 0%, $color-principal 100%);
+  }
+  50%{
+    background:linear-gradient(90deg, $color-principal 0%, $color-secundario 100%);
+  }
+  to{
+    background:linear-gradient(90deg, $color-secundario 0%, $color-principal 100%);
+  }
+  }
+
 /**estilos para pagina de Contacto**/
 
 .containercontacto {
@@ -36,16 +48,21 @@
       }
   
       .enviarconsulta {
-        background-color:$color-principal;
+        animation-name: animaciongradiente;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
         color: #fff;
         height: 2rem;
         font-size: 15px;
+        font-weight: bold;
         border: none;
         border-radius: 4px;
         margin: 5px;
         width: 20rem;
         &:hover {
+          animation-iteration-count: 0;
           background-color: rgba(162, 162, 162, 0.912);
+          transform: scale(1.1);
         }
       }
     }

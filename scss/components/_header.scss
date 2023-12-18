@@ -143,13 +143,14 @@ header {
       li{
         
         ul {
+          display: block;
           position: relative;
           min-width: 100%;
           text-align: end;
-          padding: 10px;
+          padding-top: 15px;
         li {
           a {
-            color: rgba(218, 166, 9, 0.922);
+            color: rgb(255, 255, 255);
             
           }
         }

@@ -131,13 +131,14 @@ header {
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
   .menu li ul {
+    display: block;
     position: relative;
     min-width: 100%;
     text-align: end;
-    padding: 10px;
+    padding-top: 15px;
   }
   .menu li ul li a {
-    color: rgba(218, 166, 9, 0.922);
+    color: rgb(255, 255, 255);
   }
   .menu ul {
     flex-direction: column;
@@ -298,7 +299,6 @@ header {
 }
 .p-destacado .descripcion-producto {
   height: 22px;
-  font-weight: bold;
 }
 .p-destacado .preciodestacado {
   font-weight: bold;
@@ -325,6 +325,7 @@ header {
 }
 .aniadiralcarrito:hover {
   background-color: rgb(152, 151, 151);
+  transform: scale(1.1);
 }
 
 .iratienda {
@@ -509,7 +510,7 @@ footer {
 
 .titulosecciones {
   font-family: Formula1-Bold;
-  background-color: rgb(152, 151, 151);
+  background: linear-gradient(90deg, rgb(83, 83, 83) 0%, rgb(144, 143, 143) 100%);
   padding: 3%;
   font-size: 3rem;
   color: rgb(255, 255, 255);
@@ -534,7 +535,7 @@ footer {
 .tienda img {
   width: 100%;
 }
-.tienda h4 {
+.tienda .titulo-producto {
   font-size: 14px;
   width: 70%;
   height: 45px;
@@ -542,16 +543,19 @@ footer {
   margin-top: 5px;
   font-weight: bold;
 }
-.tienda p {
+.tienda .p-descripcion {
+  height: 30px;
+  margin-top: 5px;
   font-size: 12px;
-  height: 50px;
-  width: 100%;
 }
-
-.precio {
+.tienda .precio {
   font-weight: bold;
   color: rgb(0, 128, 0);
   font-family: Formula1-Bold;
+  font-size: 12px;
+  height: auto;
+  width: auto;
+  padding-top: 25px;
 }
 
 .tienda button {
@@ -569,27 +573,27 @@ footer {
     width: 100%;
     margin-bottom: 20px;
   }
-  .tienda h4 {
+  .tienda .titulo-producto {
     font-size: 14px;
     width: 100%;
     height: 40px;
     margin-bottom: 5px;
     margin-top: 5px;
   }
-  .tienda p {
+  .tienda .p-descripcion {
     font-size: 12px;
     height: 70px;
     width: 70%;
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .tienda button {
-    margin-bottom: 0;
-  }
-  .producto-tienda .precio {
-    margin-top: 5px;
+  .tienda .precio {
     height: 25px;
     width: 100%;
+  }
+  .tienda button {
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -709,24 +713,75 @@ footer {
 .maintrabajos {
   height: 100%;
 }
+.maintrabajos h2 {
+  text-align: center;
+  color: rgb(6, 74, 110);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: auto;
+  font-weight: bold;
+}
 
 .contenedor-trabajos {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px; /* Espacio entre los trabajos*/
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 10px; /* Espacio entre los trabajos*/
   text-align: center;
+  margin: auto;
 }
 
 .trabajo-muestra {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
 }
 .trabajo-muestra img {
   width: 100%;
 }
 
+@media only screen and (max-width: 900px) {
+  .maintrabajos h2 {
+    font-size: 1.4rem;
+  }
+  .contenedor-trabajos {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .maintrabajos h2 {
+    font-size: 1rem;
+  }
+  .contenedor-trabajos {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 5px; /* Espacio entre los trabajos*/
+  }
+  .trabajo-muestra {
+    width: 150px;
+    height: 250px;
+  }
+  .trabajo-muestra img {
+    width: 100%;
+  }
+  .trabajo-muestra p {
+    font-size: 0.8rem;
+    height: auto;
+  }
+}
+@keyframes animaciongradiente {
+  from {
+    background: linear-gradient(90deg, rgb(152, 151, 151) 0%, rgb(6, 74, 110) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, rgb(6, 74, 110) 0%, rgb(152, 151, 151) 100%);
+  }
+  to {
+    background: linear-gradient(90deg, rgb(152, 151, 151) 0%, rgb(6, 74, 110) 100%);
+  }
+}
 /**estilos para pagina de Contacto**/
 .containercontacto {
   display: flex;
@@ -759,17 +814,22 @@ footer {
   padding: 5px;
 }
 .containercontacto form .enviarconsulta {
-  background-color: rgb(6, 74, 110);
+  animation-name: animaciongradiente;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
   color: #fff;
   height: 2rem;
   font-size: 15px;
+  font-weight: bold;
   border: none;
   border-radius: 4px;
   margin: 5px;
   width: 20rem;
 }
 .containercontacto form .enviarconsulta:hover {
+  animation-iteration-count: 0;
   background-color: rgba(162, 162, 162, 0.912);
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 900px) {

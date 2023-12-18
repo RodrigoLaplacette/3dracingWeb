@@ -90,7 +90,7 @@
   .p-destacado {
     width: 20%;
     padding: 10px;
-  
+ 
     img {
       width: 100%;
     }
@@ -110,8 +110,6 @@
 
     .descripcion-producto {
       height: 22px;
-      font-weight: bold;
-
     }
   
     .preciodestacado {
@@ -132,6 +130,7 @@
   .aniadiralcarrito {
     &:hover {
       background-color: $color-secundario;
+        transform: scale(1.1);
     }
     font-family: Formula1-Bold;
     font-size: 13px;
