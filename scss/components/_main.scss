@@ -127,7 +127,7 @@
     }
   }
   
-  .aniadiralcarrito {
+  .botoncomprar {
     &:hover {
       background-color: $color-secundario;
         transform: scale(1.1);
@@ -137,11 +137,21 @@
     height: 50px;
     width: 150px;
     background-color: $color-principal;
-    color: #fff; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     border: none; /* Elimina el borde */
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-weight: bold; /* Texto en negrita */
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+    align-items: center;
+  }
+
+  .whatsappbutton {
+    color: rgb(9, 184, 9);
+    margin: 10px;
+    font-size: 20px;
   }
   
   .iratienda {
@@ -150,7 +160,11 @@
     height: 55px;
     margin-bottom: 20px;
     justify-content: end;
+    a {
+      text-decoration: none;
+    }
   }
+
 
   @media only screen and (max-width: 900px) {
 

@@ -91,20 +91,6 @@ header {
   color: rgba(134, 141, 145, 0.912);
 }
 
-.search-cart {
-  display: flex;
-  align-items: center;
-  width: auto;
-  gap: 5%;
-}
-
-.buscar,
-.carrito {
-  color: rgb(255, 255, 255);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
 /**propiedad para cambiar de color el texto a la hora de pasar el cursos**/
 .abrir-menu {
   display: none;
@@ -163,11 +149,6 @@ header {
   .cerrar-menu {
     color: rgb(255, 255, 255);
     font-size: 3rem;
-  }
-  .search-cart {
-    margin-left: 5%;
-    width: 100%;
-    gap: 3%;
   }
   @keyframes desplazamiento {
     0% {
@@ -311,21 +292,31 @@ header {
   font-size: 13px;
 }
 
-.aniadiralcarrito {
+.botoncomprar {
   font-family: Formula1-Bold;
   font-size: 13px;
   height: 50px;
   width: 150px;
   background-color: rgb(6, 74, 110);
-  color: #fff; /* Color del texto */
+  color: #ffffff; /* Color del texto */
   border: none; /* Elimina el borde */
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   font-weight: bold; /* Texto en negrita */
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
 }
-.aniadiralcarrito:hover {
+.botoncomprar:hover {
   background-color: rgb(152, 151, 151);
   transform: scale(1.1);
+}
+
+.whatsappbutton {
+  color: rgb(9, 184, 9);
+  margin: 10px;
+  font-size: 20px;
 }
 
 .iratienda {
@@ -334,6 +325,9 @@ header {
   height: 55px;
   margin-bottom: 20px;
   justify-content: end;
+}
+.iratienda a {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -545,6 +539,7 @@ footer {
 }
 .tienda .p-descripcion {
   margin-top: 5px;
+  height: 30px;
   font-size: 12px;
 }
 .tienda .precio {
@@ -554,7 +549,8 @@ footer {
   font-size: 12px;
   height: auto;
   width: auto;
-  padding-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .tienda button {

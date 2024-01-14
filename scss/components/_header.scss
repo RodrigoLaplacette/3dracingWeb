@@ -42,7 +42,6 @@ header {
         
         100% {
             left: calc(140% - 100px); /* Ajusta la posición final según el tamaño de tu imagen */
-     
         }
       }
     }
@@ -97,20 +96,6 @@ header {
         color: rgba(134, 141, 145, 0.912);
       }
     }
-  }
-  
-  .search-cart {
-    display: flex;
-    align-items: center;
-    width: auto;
-    gap: 5%;
-  }
-  
-  .buscar,
-  .carrito {
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    cursor: pointer;
   }
   
   /**propiedad para cambiar de color el texto a la hora de pasar el cursos**/
@@ -185,12 +170,6 @@ header {
     .cerrar-menu {
       color: rgb(255, 255, 255);
       font-size: 3rem;
-    }
-  
-    .search-cart {
-      margin-left: 5%;
-      width: 100%;
-      gap: 3%;
     }
   
 
