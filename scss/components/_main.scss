@@ -108,6 +108,10 @@
       width: auto;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .descripcion-producto {
       height: 22px;
     }
@@ -132,6 +136,12 @@
       background-color: $color-secundario;
         transform: scale(1.1);
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: Formula1-Bold;
     font-size: 13px;
     height: 50px;
@@ -140,7 +150,6 @@
     color: #ffffff; /* Color del texto */
     border: none; /* Elimina el borde */
     border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-weight: bold; /* Texto en negrita */
     display: flex;
     justify-content:center;
@@ -151,8 +160,10 @@
   .whatsappbutton {
     color: rgb(9, 184, 9);
     margin: 10px;
-    font-size: 20px;
+    font-size: 25px;
   }
+
+
   
   .iratienda {
     display: flex;

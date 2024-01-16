@@ -278,6 +278,9 @@ header {
   font-size: 12px;
   width: auto;
 }
+.p-destacado a {
+  text-decoration: none;
+}
 .p-destacado .descripcion-producto {
   height: 22px;
 }
@@ -293,6 +296,7 @@ header {
 }
 
 .botoncomprar {
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   font-family: Formula1-Bold;
   font-size: 13px;
   height: 50px;
@@ -301,7 +305,6 @@ header {
   color: #ffffff; /* Color del texto */
   border: none; /* Elimina el borde */
   border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   font-weight: bold; /* Texto en negrita */
   display: flex;
   justify-content: center;
@@ -312,11 +315,14 @@ header {
   background-color: rgb(152, 151, 151);
   transform: scale(1.1);
 }
+.botoncomprar a {
+  text-decoration: none;
+}
 
 .whatsappbutton {
   color: rgb(9, 184, 9);
   margin: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .iratienda {
@@ -517,6 +523,9 @@ footer {
   height: 100%;
   width: 280px;
   padding: 10px;
+}
+.producto-tienda a {
+  text-decoration: none;
 }
 
 .tienda {
