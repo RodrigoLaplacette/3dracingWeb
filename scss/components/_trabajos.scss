@@ -15,19 +15,19 @@
   }
 
   .contenedor-trabajos {
-    width: 100%;
+    width: 95%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     text-align: center;
     margin: auto;
     overflow: hidden;
   }
 
   .trabajo-muestra {
-    width: 250px;
-    height: 350px;
+    width: 350px;
+    height: 450px;
     margin-bottom: 60px;
     padding: 10px;
     img {
@@ -77,8 +77,8 @@
     }
   
     .trabajo-muestra {
-      width: 150px;
-      height: 250px;
+      width: 250px;
+      height: 350px;
       img {
         width:100% ;
       }

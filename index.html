@@ -31,8 +31,21 @@
           <li><a href="pages/contacto.html">Contacto</a></li>  
         </ul>
       </nav>
+    </div>
+    <div class="carritomenu">
+      <button class="botoncarrito"><i class="bi bi-cart"></i></button>
+          <div class="cart">
+            <h2>Tu carrito de compras</h2>
+            <ul class="cart-list"></ul>
+            <p class="total">Total de la compra: <span> 0.0</span></p>
+            <div class="clear-pagar">
+            <button class="pagar">Pagar</button>
+            <button class="clear-cart">Limpiar Carrito</button>
+          </div>
+      </div>
   <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
-</div>
+      </div>
+
 <div class="f1animado">
   <img src="img/f1animado.png" alt="f2004Animada" />
 </div>
@@ -89,41 +102,41 @@
       <h3>Productos destacados</h3>
       </section>
       <div class="conteinerdestacados">
-          <div class="p-destacado">
+          <div class="product" data-id="1" data-name="Figura Fangio" data-price="12.400">
             <img src="img/figurafangio.jpg" alt="figura juan manuel fangio escala 1/8" />
             <h4>Fangio Figura</h4>
             <p class="descripcion-producto">Figura escala 1-8</p>
             <p class="preciodestacado">Precio: $15.199</p>
-            <p class="poferta">Oferta: $12.400</p>
-            <a href="https://api.whatsapp.com/send?phone=3329521005" target="_blank"><button class="botoncomprar">Comprar <div class="whatsappbutton"><i class="bi bi-whatsapp"></i></div></button></a>
+            <p class="price">$12.400</p>
+            <button class="add-to-cart">Añadir al carrito</button>
           </div>
-          <div class="p-destacado">
+          <div class="product" data-id="2" data-name="Soporte Racing" data-price="6.400">
             <img src="img/soportesparco.png" alt="soporte butaca racing para teléfono" />
             <h4>Soporte Butaca Racing</h4>
             <p class="descripcion-producto">Soporte para celulares</p>
             <p class="preciodestacado">Precio: $7.400</p>
-            <p class="poferta">Oferta: $6.400</p>
-            <a href="https://api.whatsapp.com/send?phone=3329521005" target="_blank"><button class="botoncomprar">Comprar <div class="whatsappbutton"><i class="bi bi-whatsapp"></i></div></button></a>
+            <p class="price">$6.400</p>
+            <button class="add-to-cart">Añadir al carrito</button>
           </div>
-          <div class="p-destacado">
+          <div class="product" data-id="3" data-name="Ayrton Senna Figura" data-price="12.600">
             <img src="img/figurasenna.jpg" alt="figura Ayrton Senna 3d" />
             <h4>Ayrton Senna Figura</h4>
             <p class="descripcion-producto">Figura detallada 20cm de altura</p>
             <p class="preciodestacado">Precio: $18.600</p>
-            <p class="poferta">Oferta: $12.600</p>
-            <a href="https://api.whatsapp.com/send?phone=3329521005" target="_blank"><button class="botoncomprar">Comprar <div class="whatsappbutton"><i class="bi bi-whatsapp"></i></div></button></a>
+            <p class="price">$12.600</p>
+            <button class="add-to-cart">Añadir al carrito</button>
           </div>
-          <div class="p-destacado">
+          <div class="product" data-id="4" data-name="Circuito3D" data-price="1.750">
             <img src="img/circuito3d.jpg" alt="circuitos en 3d decoratvios" />
             <h4>Circuitos 3D</h4>
             <p class="descripcion-producto">Circuitos en 3D de 23cm</p>
             <p class="preciodestacado">Precio: $2.250</p>
-            <p class="poferta">Oferta: $1.750</p>
-            <a href="https://api.whatsapp.com/send?phone=3329521005" target="_blank"><button class="botoncomprar">Comprar <div class="whatsappbutton"><i class="bi bi-whatsapp"></i></div></button></a>
+            <p class="price">$1.750</p>
+            <button class="add-to-cart">Añadir al carrito</button>
           </div>
       </div>
       <div class="iratienda">
-        <a href="pages/productos.html"><button class="botoncomprar">IR A LA TIENDA<i class="bi bi-arrow-right"></i></button></a>
+        <a href="pages/productos.html"><button class="tienda-button">IR A LA TIENDA<i class="bi bi-arrow-right"></i></button></a>
     </div>
     </main>
 
