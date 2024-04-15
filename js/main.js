@@ -14,11 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const botonCarrito = document.querySelector('.botoncarrito');
     const cart = document.querySelector('.cart');
 
-    // Agregar evento de clic al botón del carrito
     botonCarrito.addEventListener('click', toggleCart);
 
     function toggleCart() {
-        // Alternar la visibilidad del carrito cambiando su clase
         cart.classList.toggle('show');
     }
 });
@@ -29,21 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartList = document.querySelector('.cart-list');
     const totalElement = document.querySelector('.total span');
     const clearCartButton = document.querySelector('.clear-cart');
-    const contadorCarrito = document.querySelector('.contador'); // Nuevo
+    const contadorCarrito = document.querySelector('.contador'); 
 
     let cart = [];
-    let cartCounter = 0; // Nuevo
+    let cartCounter = 0; 
 
-    // Agregar evento al botón "Añadir al carrito"
     products.forEach(product => {
         const addToCartButton = product.querySelector('.add-to-cart');
         addToCartButton.addEventListener('click', () => {
             addToCart(product);
-            updateCartCounter(); // Actualizar el contador de productos
+            updateCartCounter(); 
         });
     });
 
-    // Agregar evento al botón "Limpiar carrito"
     clearCartButton.addEventListener('click', clearCart);
 
     // Función para agregar un producto al carrito
@@ -82,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         totalElement.textContent = `$${total.toLocaleString('es-AR')}`;
 
-        // Agregar evento a los botones de eliminar productos
         const removeButtons = document.querySelectorAll('.remove-item');
         removeButtons.forEach(button => {
             button.addEventListener('click', () => removeItem(button.dataset.id));
@@ -96,17 +91,16 @@ function removeItem(productId) {
         const quantityToRemove = itemToRemove.quantity;
         cart = cart.filter(item => item.id !== productId);
         updateCartUI();
-        cartCounter -= quantityToRemove; // Restar la cantidad del producto eliminado al contador
-        contadorCarrito.textContent = cartCounter; // Actualizar el contador en el DOM
+        cartCounter -= quantityToRemove;
+        contadorCarrito.textContent = cartCounter; 
     }
 }
-
 
     // Función para limpiar el carrito
     function clearCart() {
         cart = [];
         updateCartUI();
-        cartCounter = 0; // Restablecer el contador de productos
-        contadorCarrito.textContent = cartCounter; // Actualizar el contador en el DOM
+        cartCounter = 0; 
+        contadorCarrito.textContent = cartCounter;
     }
 });
