@@ -1,36 +1,38 @@
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
-
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-} )
-
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-} )
-
 document.addEventListener("DOMContentLoaded", function() {
-    const botonCarrito = document.querySelector('.botoncarrito');
-    const cart = document.querySelector('.cart');
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
 
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    });
+
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+
+    const botonCarrito = document.querySelector('.botoncarrito');
+    const cartElement = document.querySelector('.cart');
     botonCarrito.addEventListener('click', toggleCart);
 
+    let cart = [];
+
     function toggleCart() {
-        cart.classList.toggle('show');
+        cartElement.classList.toggle('show');
     }
-});
 
-
-document.addEventListener("DOMContentLoaded", function() {
     const products = document.querySelectorAll('.product');
     const cartList = document.querySelector('.cart-list');
     const totalElement = document.querySelector('.total span');
     const clearCartButton = document.querySelector('.clear-cart');
     const contadorCarrito = document.querySelector('.contador'); 
 
-    let cart = [];
-    let cartCounter = 0; 
+    // Recuperar los items del carrito guardado del almacenamiento local
+    if (localStorage.getItem('cart')) {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        updateCartUI();
+        updateCartCounter();
+    }
 
     products.forEach(product => {
         const addToCartButton = product.querySelector('.add-to-cart');
@@ -42,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     clearCartButton.addEventListener('click', clearCart);
 
-    // Función para agregar un producto al carrito
     function addToCart(product) {
         const productId = product.dataset.id;
         const productName = product.dataset.name;
@@ -56,16 +57,17 @@ document.addEventListener("DOMContentLoaded", function() {
             cart.push({id:productId, name: productName, price: productPrice, quantity: 1});
         }
 
+        // Guardar los items del carrito en el almacenamiento local
+        localStorage.setItem('cart', JSON.stringify(cart));
+
         updateCartUI();
     }
 
-    // Función para actualizar el contador de productos en el carrito
     function updateCartCounter() {
-        cartCounter++;
+        const cartCounter = cart.reduce((total, item) => total + item.quantity, 0);
         contadorCarrito.textContent = cartCounter;
     }
 
-    // Función para actualizar el carrito en la interfaz de usuario
     function updateCartUI() {
         cartList.innerHTML = '';
         let total = 0;
@@ -84,23 +86,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
- // Función para eliminar un producto del carrito
-function removeItem(productId) {
-    const itemToRemove = cart.find(item => item.id === productId);
-    if (itemToRemove) {
-        const quantityToRemove = itemToRemove.quantity;
+    function removeItem(productId) {
         cart = cart.filter(item => item.id !== productId);
+        // Actualizar el carrito en el almacenamiento local después de eliminar un elemento
+        localStorage.setItem('cart', JSON.stringify(cart));
         updateCartUI();
-        cartCounter -= quantityToRemove;
-        contadorCarrito.textContent = cartCounter; 
+        updateCartCounter();
     }
-}
 
-    // Función para limpiar el carrito
     function clearCart() {
         cart = [];
+        // Limpiar el carrito en el almacenamiento local
+        localStorage.removeItem('cart');
         updateCartUI();
-        cartCounter = 0; 
-        contadorCarrito.textContent = cartCounter;
+        updateCartCounter();
     }
 });

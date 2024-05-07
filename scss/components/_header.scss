@@ -100,7 +100,7 @@ header {
   }
 
   .carritomenu{
-  margin-left: 70%;
+  margin-left: 80%;
   position: fixed;
   margin-bottom: 15px;
   display: flex;
@@ -121,7 +121,6 @@ header {
     display:flex;
     width: 50px;
     height: 50px;
-    align-items: center;
     color: rgb(255, 255, 255);
     font-size: 35px;
     cursor: pointer;
@@ -131,6 +130,7 @@ header {
   }
 
   .cart {
+    margin-top:0px;
     text-align: center;
     position: fixed;
     top:100%;
@@ -162,6 +162,7 @@ header {
   }
 
   .show{
+    right:0;
     display: block;
     width: 400px;
     position: absolute;
@@ -226,22 +227,32 @@ header {
 
 
   @media only screen and (max-width: 900px) {
-    .menu {
-      opacity: 0;
-      width: 150px;
-      visibility: hidden;
+    .menucontainer {
+      height: 120px;
+      width:100%;
       display: flex;
+      justify-content: flex-start;
+      position:absolute;
+    }
+    .racing-logo {
+      padding-left: 20px;
+    }
+    .menu {
+      margin-top: 110px;
+      opacity: 0;
+      width: 200px;
+      visibility: hidden;
+      display: block;
       flex-direction: column;
       align-items: center;
-      position: fixed;
+      position: absolute;
       background-color:$color-principal;
       gap: 2rem;
       top: 10px;
       right: 0;
-      height: 400px;
+      height: 900px;
       box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
       
-
       li{
         
         ul {
@@ -277,13 +288,14 @@ header {
     .abrir-menu,
     .cerrar-menu {
       display: block;
-      position: fixed;
-      margin-left: 70%;
+      position: absolute;
+      margin-left:98%;
+      padding-left: 20px;
+      color: #fefefe;
       border: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
       background-color: transparent;
       cursor: pointer;
-      margin-right: 10%;
     }
 
   
@@ -291,26 +303,14 @@ header {
       color: rgb(255, 255, 255);
       font-size: 3rem;
       position: relative;
+      margin: 0;
+      padding-bottom: 50px;
     }
 
     .carritomenu{
       margin-left: 60%;
-      position: fixed;
-    
-      .cart {
-        height: 250px;
-        width: 200px;
-        top: 100%;
-        right:0;
-        background-color: #1c1010;
-        border: 1px solid #cba4a4;
-        margin-top: 200px;
-        
+      margin-bottom:0;
       }
-
-    }
-    
-    
 
   .f1animado {
     img {
@@ -332,8 +332,8 @@ header {
     }
 
   }
-  
   }
+
   
   @media only screen and (max-width: 600px) {
     .f1animado {
@@ -355,4 +355,74 @@ header {
               }
       }
   }
+
+  .abrir-menu {
+    display: block;
+    position: absolute;
+    margin-left:80%;
+    padding-left: 20px;
+    color: #fefefe;
+    border: 0;
+    font-size: 2.5rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .carritomenu{
+    position: fixed;
+    margin-bottom: 15px;
+    display: flex;
+    text-align: center;
+
+    }
+  
+    .botoncarrito{
+      display:flex;
+    }
+  
+    .cart {
+      margin-top:0px;
+      text-align: center;
+      position: fixed;
+      top:100%;
+      display:block;
+      ul{
+        height: auto;
+        width: auto;
+        font-size: 10px;
+        li{
+          width: auto;
+        }
+      }
+    }
+  
+    .show{
+      margin-top: 25px;
+      right:0;
+      display: block;
+      width: 280px;
+      position: absolute;
+      .contador{
+        display: none;
+      }
+    }
+  
+  
+  
+    .remove-item {
+      width: 45px;
+      font-size: 8px;
+    }
+  
+    .clear-pagar {
+        .clear-cart {
+          font-size: 10px;
+        }
+    }
+  
+  
+  
+    .total{
+      font-size: 14px;
+    }
   }
