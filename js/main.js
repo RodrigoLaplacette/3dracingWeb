@@ -97,25 +97,28 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCartCounter();
     }
 
-    function clearCart() {
-        cart = [];
-        // Limpiar el carrito en el almacenamiento local
-        localStorage.removeItem('cart');
-        updateCartUI();
-        updateCartCounter();
-    }
-});
+  
 
 const botonPagar = document.getElementById('pagar-carrito');
 botonPagar.addEventListener('click', function() {
+    clearCart();
     Swal.fire({
         title: "¡Gracias por tu compra!",
         confirmButtonText: "por favor espere",
         icon:"success",
         timer:2000,
         timerProgressBar: true,
-    
     });
+    
+});
+
+function clearCart() {
+    cart = [];
+    // Limpiar el carrito en el almacenamiento local
+    localStorage.removeItem('cart');
+    updateCartUI();
+    updateCartCounter();
+}
 });
 
 
