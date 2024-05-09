@@ -45,22 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Obtener el botón por su ID
-    const botonPagar = document.getElementById('pagar-carrito');
-
-    // Agregar un event listener al botón
-    botonPagar.addEventListener('click', function() {
-        // Ejecutar la función Swal.fire al hacer clic en el botón
-        Swal.fire({
-            title: "¡Gracias por tu compra!",
-            confirmButtonText: "por favor espere",
-            icon:"success",
-            timer:2000,
-            timerProgressBar: true,
-        
-        });
-    });
-
     clearCartButton.addEventListener('click', clearCart);
 
     function addToCart(product) {
@@ -122,9 +106,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+const botonPagar = document.getElementById('pagar-carrito');
+botonPagar.addEventListener('click', function() {
+    Swal.fire({
+        title: "¡Gracias por tu compra!",
+        confirmButtonText: "por favor espere",
+        icon:"success",
+        timer:2000,
+        timerProgressBar: true,
+    
+    });
+});
+
 
 if (!localStorage.getItem('swalExecutado')) {
-    // Ejecutar la función Swal.fire() solo si no se ha ejecutado antes
     Swal.fire({
         title: "¡Bienvenido a 3D Racing!",
         text: "El mundo motor en 3D",
@@ -133,3 +128,4 @@ if (!localStorage.getItem('swalExecutado')) {
 
     localStorage.setItem('swalExecutado', true);
 }
+
