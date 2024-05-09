@@ -1,0 +1,32 @@
+main{
+    height: auto;
+}
+
+.drivers{
+    padding-top:150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .team{
+        border-top: 3px solid rgb(0, 0, 0);
+        border-right: 3px solid rgb(0, 0, 0);
+        border-radius: 15px;
+        text-align: center;
+        height: auto;
+        width: 40%;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 20px;
+    .teamname{
+        padding-bottom: 20px;
+    }
+    .pilotos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+    }
+    }
+
+}
+

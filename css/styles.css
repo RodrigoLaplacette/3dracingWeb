@@ -1073,6 +1073,37 @@ footer {
     padding: 1rem;
   }
 }
+main {
+  height: auto;
+}
+
+.drivers {
+  padding-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.drivers .team {
+  border-top: 3px solid rgb(0, 0, 0);
+  border-right: 3px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  text-align: center;
+  height: auto;
+  width: 40%;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.drivers .team .teamname {
+  padding-bottom: 20px;
+}
+.drivers .team .pilotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+}
+
 @font-face {
   font-family: Formula1-Regular;
   src: url(../fuentes/Formula1-Regular.ttf);
