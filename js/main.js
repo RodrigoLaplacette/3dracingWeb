@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCartCounter();
     }
 
-  
 
 const botonPagar = document.getElementById('pagar-carrito');
 botonPagar.addEventListener('click', function() {
